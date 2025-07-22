@@ -12,18 +12,24 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# --- Define the specific URL of your frontend ---
-# Replace this with the URL from your browser's address bar for the frontend
-frontend_url = "https://fuzzy-palm-tree-97qrwvppr9g7f7pv9-3000.app.github.dev" 
+# --- Define the specific URLs of your frontend environments ---
 
+# 1. The URL for your live frontend on Render
+#    REPLACE THIS with the actual URL of your deployed frontend
+live_frontend_url = "https://attendance-website-cweo.onrender.com" 
+
+# 2. The URL for your development frontend in Codespaces
+codespaces_frontend_url = "https://fuzzy-palm-tree-97qrwvppr9g7f7pv9-3000.app.github.dev" 
+
+# Create a list of allowed origins
 origins = [
-    frontend_url,
-    # You can add more origins here if needed, e.g., for production
+    live_frontend_url,
+    codespaces_frontend_url,
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins, # Use the specific list instead of "*"
+    allow_origins=origins, # Use the specific list
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
