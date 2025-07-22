@@ -2,15 +2,15 @@
   "version": 2,
   "builds": [
     {
+      "src": "backend/app/main.py",
+      "use": "@vercel/python"
+    },
+    {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "build"
       }
-    },
-    {
-      "src": "backend/app/main.py",
-      "use": "@vercel/python"
     }
   ],
   "rewrites": [
@@ -19,8 +19,32 @@
       "destination": "/backend/app/main.py"
     },
     {
+      "source": "/static/(.*)",
+      "destination": "/frontend/build/static/$1"
+    },
+    {
+      "source": "/manifest.json",
+      "destination": "/frontend/build/manifest.json"
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/frontend/build/favicon.ico"
+    },
+    {
+      "source": "/logo192.png",
+      "destination": "/frontend/build/logo192.png"
+    },
+    {
+      "source": "/logo512.png",
+      "destination": "/frontend/build/logo512.png"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/frontend/build/robots.txt"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/frontend/index.html"
+      "destination": "/frontend/build/index.html"
     }
   ]
 }
