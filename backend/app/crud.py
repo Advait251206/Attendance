@@ -1,16 +1,7 @@
 from sqlalchemy import or_
 from sqlalchemy.orm import Session
 from . import models, schemas
-from passlib.context import CryptContext
-
-# Setup password hashing
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-def verify_password(plain_password, hashed_password):
-    return pwd_context.verify(plain_password, hashed_password)
-
-def get_password_hash(password):
-    return pwd_context.hash(password)
+# Passlib context is no longer needed
 
 # --- User CRUD ---
 def get_user_by_username(db: Session, username: str):
@@ -20,11 +11,11 @@ def get_user_by_email(db: Session, email: str):
     return db.query(models.User).filter(models.User.email == email).first()
 
 def create_user(db: Session, user: schemas.UserCreate):
-    hashed_password = get_password_hash(user.password)
+    # The password is saved directly without hashing
     db_user = models.User(
         username=user.username, 
         email=user.email, 
-        hashed_password=hashed_password
+        password=user.password 
     )
     db.add(db_user)
     db.commit()
@@ -38,8 +29,11 @@ def authenticate_user(db: Session, username_or_email: str, password: str) -> mod
 
     if not user:
         return None
-    if not verify_password(password, user.hashed_password):
+    
+    # Simple string comparison instead of hash verification
+    if user.password != password:
         return None
+        
     return user
 
 # --- Subject CRUD ---
@@ -57,10 +51,7 @@ def create_user_subject(db: Session, subject: schemas.SubjectCreate, user_id: in
     return db_subject
 
 # --- Attendance CRUD ---
-# (The rest of this file is unchanged and correct)
 def get_attendance_by_date(db: Session, user_id: int, specific_date: str):
-    # This function needs a date object, not a string. Let's fix this too.
-    from datetime import date
     return db.query(models.Attendance).filter(models.Attendance.owner_id == user_id, models.Attendance.date == specific_date).all()
 
 def create_attendance_record(db: Session, attendance: schemas.AttendanceCreate, user_id: int):

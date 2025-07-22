@@ -8,7 +8,7 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True, nullable=False)
     email = Column(String, unique=True, index=True, nullable=False) # <-- NEW
-    hashed_password = Column(String, nullable=False)
+    password = Column(String, nullable=False)
     is_active = Column(Boolean, default=True)
 
     attendance_records = relationship("Attendance", back_populates="owner")
