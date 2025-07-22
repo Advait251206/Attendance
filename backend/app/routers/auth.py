@@ -10,13 +10,16 @@ from ..security import create_access_token, get_current_active_user, ACCESS_TOKE
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 
-
 @router.post("/register", response_model=schemas.User, status_code=status.HTTP_201_CREATED)
 def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
-    """Handles new user registration."""
-    db_user = crud.get_user_by_username(db, username=user.username)
-    if db_user:
+    """Handles new user registration, checking for unique username and email."""
+    # Check for existing username
+    if crud.get_user_by_username(db, username=user.username):
         raise HTTPException(status_code=400, detail="Username already registered")
+    # Check for existing email
+    if crud.get_user_by_email(db, email=user.email):
+        raise HTTPException(status_code=400, detail="Email already registered")
+    
     return crud.create_user(db=db, user=user)
 
 
@@ -24,12 +27,14 @@ def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
 async def login_for_access_token(
     form_data: Annotated[OAuth2PasswordRequestForm, Depends()], db: Session = Depends(get_db)
 ):
-    """Handles user login and returns a JWT access token."""
-    user = crud.get_user_by_username(db, form_data.username)
-    if not user or not crud.verify_password(form_data.password, user.hashed_password):
+    """Handles user login with either username or email."""
+    # The form's 'username' field can contain either a username or an email
+    user = crud.authenticate_user(db, username_or_email=form_data.username, password=form_data.password)
+    
+    if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
+            detail="Incorrect username, email, or password",
             headers={"WWW-Authenticate": "Bearer"},
         )
     

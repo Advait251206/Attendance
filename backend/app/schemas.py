@@ -1,5 +1,5 @@
 import re
-from pydantic import BaseModel, ConfigDict, Field, validator
+from pydantic import BaseModel, ConfigDict, Field, validator, EmailStr
 from typing import List, Optional
 from datetime import date
 from .models import AttendanceStatus
@@ -36,11 +36,12 @@ class Attendance(AttendanceBase):
     subject: Subject # Nesting the subject schema for richer responses
     model_config = ConfigDict(from_attributes=True) # CORRECTED
 
-# --- User Schemas ---
 class UserBase(BaseModel):
     username: str
+    email: EmailStr # <-- NEW
 
 class UserCreate(UserBase):
+    password: str = Field(..., min_length=8)
     @validator('password')
     def strong_password(cls, v):
         """

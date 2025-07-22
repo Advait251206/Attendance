@@ -42,9 +42,9 @@ export const AuthProvider = ({ children }) => {
     setUser(userResponse.data);
   };
 
-  const register = async (username, password) => {
+   const register = async (username, email, password) => {
     // Use the PUBLIC client for registration
-    await publicApiClient.post('/auth/register', { username, password });
+    await publicApiClient.post('/auth/register', { username, email, password });
     
     // If registration is successful, automatically log the user in
     await login(username, password);
