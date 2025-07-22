@@ -61,7 +61,6 @@ class UserCreate(UserBase):
 class User(UserBase):
     id: int
     is_active: bool
-    subjects: List[Subject] = []
     model_config = ConfigDict(from_attributes=True)
 
 # --- Token Schemas ---

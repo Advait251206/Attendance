@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid';
+import SubjectManager from '../components/SubjectManager'; // <-- IMPORT
 
 const DashboardPage = () => {
   const { user, logout } = useAuth();
@@ -18,16 +19,9 @@ const DashboardPage = () => {
         </button>
       </header>
 
-      <main className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2 card">
-          <h2 className="text-2xl mb-4">{"// Today's Schedule"}</h2>
-          {/* Timetable and attendance logging logic will go here. */}
-        </div>
-
-        <div className="card">
-          <h2 className="text-2xl mb-4">{'// STATS_SUMMARY'}</h2>
-          {/* Charts and streak trackers will go here. */}
-        </div>
+      <main className="grid grid-cols-1 gap-8">
+        {/* Replace the old layout with our new component */}
+        <SubjectManager /> 
       </main>
     </div>
   );
