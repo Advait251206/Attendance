@@ -1,4 +1,4 @@
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 from typing import List, Optional
 from datetime import date
 from .models import AttendanceStatus
@@ -40,13 +40,14 @@ class UserBase(BaseModel):
     username: str
 
 class UserCreate(UserBase):
-    password: str
+    # Add a validation rule using Field
+    password: str = Field(..., min_length=8)
 
 class User(UserBase):
     id: int
     is_active: bool
     subjects: List[Subject] = []
-    model_config = ConfigDict(from_attributes=True) # CORRECTED
+    model_config = ConfigDict(from_attributes=True)
 
 # --- Token Schemas ---
 class Token(BaseModel):

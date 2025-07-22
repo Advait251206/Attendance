@@ -23,9 +23,21 @@ const LoginPage = () => {
       try {
         await register(username, password);
       } catch (err) {
-        setError(err.response?.data?.detail || 'Registration failed.');
+        // --- START OF NEW, SMARTER ERROR HANDLING ---
+        if (err.response && err.response.data && Array.isArray(err.response.data.detail)) {
+          // This is a FastAPI validation error. Let's parse it.
+          const firstError = err.response.data.detail[0];
+          const field = firstError.loc[1]; // e.g., "password"
+          const message = firstError.msg;  // e.g., "ensure this value has at least 8 characters"
+          setError(`Validation Error -> ${field}: ${message}`);
+        } else {
+          // This is a generic error.
+          setError(err.response?.data?.detail || 'Registration failed.');
+        }
+        // --- END OF NEW ERROR HANDLING ---
       }
     } else {
+      // ... (login logic remains the same)
       try {
         await login(username, password);
       } catch (err) {
