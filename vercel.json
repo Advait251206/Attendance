@@ -20,31 +20,31 @@
     },
     {
       "source": "/static/(.*)",
-      "destination": "/frontend/build/static/$1"
+      "destination": "/frontend/static/$1"
     },
     {
       "source": "/manifest.json",
-      "destination": "/frontend/build/manifest.json"
+      "destination": "/frontend/manifest.json"
     },
     {
       "source": "/favicon.ico",
-      "destination": "/frontend/build/favicon.ico"
+      "destination": "/frontend/favicon.ico"
     },
     {
       "source": "/logo192.png",
-      "destination": "/frontend/build/logo192.png"
+      "destination": "/frontend/logo192.png"
     },
     {
       "source": "/logo512.png",
-      "destination": "/frontend/build/logo512.png"
+      "destination": "/frontend/logo512.png"
     },
     {
       "source": "/robots.txt",
-      "destination": "/frontend/build/robots.txt"
+      "destination": "/frontend/robots.txt"
     },
     {
       "source": "/(.*)",
-      "destination": "/frontend/build/index.html"
+      "destination": "/frontend/index.html"
     }
   ]
 }
