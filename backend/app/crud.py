@@ -1,4 +1,5 @@
-from sqlalchemy.orm import Session, or_
+from sqlalchemy import or_
+from sqlalchemy.orm import Session
 from . import models, schemas
 from passlib.context import CryptContext
 
@@ -15,12 +16,11 @@ def get_password_hash(password):
 def get_user_by_username(db: Session, username: str):
     return db.query(models.User).filter(models.User.username == username).first()
 
-def get_user_by_email(db: Session, email: str): # <-- NEW
+def get_user_by_email(db: Session, email: str):
     return db.query(models.User).filter(models.User.email == email).first()
 
 def create_user(db: Session, user: schemas.UserCreate):
     hashed_password = get_password_hash(user.password)
-    # Include email when creating the user
     db_user = models.User(
         username=user.username, 
         email=user.email, 
@@ -31,10 +31,7 @@ def create_user(db: Session, user: schemas.UserCreate):
     db.refresh(db_user)
     return db_user
 
-def authenticate_user(db: Session, username_or_email: str, password: str) -> models.User | None: # <-- NEW
-    """
-    Finds a user by either their username or email, then verifies their password.
-    """
+def authenticate_user(db: Session, username_or_email: str, password: str) -> models.User | None:
     user = db.query(models.User).filter(
         or_(models.User.username == username_or_email, models.User.email == username_or_email)
     ).first()
@@ -60,7 +57,10 @@ def create_user_subject(db: Session, subject: schemas.SubjectCreate, user_id: in
     return db_subject
 
 # --- Attendance CRUD ---
+# (The rest of this file is unchanged and correct)
 def get_attendance_by_date(db: Session, user_id: int, specific_date: str):
+    # This function needs a date object, not a string. Let's fix this too.
+    from datetime import date
     return db.query(models.Attendance).filter(models.Attendance.owner_id == user_id, models.Attendance.date == specific_date).all()
 
 def create_attendance_record(db: Session, attendance: schemas.AttendanceCreate, user_id: int):
