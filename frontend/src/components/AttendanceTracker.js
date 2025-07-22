@@ -4,7 +4,6 @@ import { CalendarDaysIcon, CheckCircleIcon, XCircleIcon, NoSymbolIcon, SunIcon }
 import { secureApiClient } from '../api/axios';
 import { weeklySchedule } from '../data/timetableData';
 
-// Helper function to format a Date object into YYYY-MM-DD string
 const formatDateForAPI = (date) => {
     return date.toISOString().split('T')[0];
 };
@@ -27,16 +26,12 @@ const AttendanceTracker = () => {
                 secureApiClient.get('/api/subjects/'),
                 secureApiClient.get(`/api/attendance/${formattedDate}`)
             ]);
-
             setSubjects(subjectsResponse.data);
             setAttendanceRecords(attendanceResponse.data);
-
             const dayOfWeek = currentDate.getDay();
             setScheduleForToday(weeklySchedule[dayOfWeek] || []);
-
         } catch (err) {
             setError('Failed to fetch data. Please try again.');
-            console.error(err);
         } finally {
             setLoading(false);
         }
@@ -49,47 +44,33 @@ const AttendanceTracker = () => {
     const handleMarkAttendance = async (subjectName, status) => {
         const subject = subjects.find(s => s.name === subjectName);
         if (!subject) {
-            setError(`Subject "${subjectName}" not found in your subject list. Please add it via the Subjects tab first.`);
+            setError(`Subject "${subjectName}" not found. Add it via the Subjects tab first.`);
             return;
         }
-
         const existingRecord = attendanceRecords.find(r => r.subject.id === subject.id);
         const formattedDate = formatDateForAPI(currentDate);
-
         try {
             if (existingRecord) {
-                await secureApiClient.put(`/api/attendance/${existingRecord.id}`, {
-                    status: status,
-                    subject_id: subject.id,
-                    date: formattedDate,
-                });
+                await secureApiClient.put(`/api/attendance/${existingRecord.id}`, { status, subject_id: subject.id, date: formattedDate });
             } else {
-                await secureApiClient.post('/api/attendance/', {
-                    date: formattedDate,
-                    status: status,
-                    subject_id: subject.id,
-                });
+                await secureApiClient.post('/api/attendance/', { date: formattedDate, status, subject_id: subject.id });
             }
             fetchData();
         } catch (err) {
             setError('Failed to update attendance.');
-            console.error(err);
         }
     };
     
     const getStatusBadge = (subjectName) => {
         const record = attendanceRecords.find(r => r.subject.name === subjectName);
         if (!record) return null;
-
         const statusMap = {
             present: { text: 'Present', icon: CheckCircleIcon, color: 'text-hacker-green' },
             absent: { text: 'Absent', icon: XCircleIcon, color: 'text-red-500' },
             cancelled: { text: 'Cancelled', icon: NoSymbolIcon, color: 'text-yellow-500' }
         };
-
         const { text, icon: Icon, color } = statusMap[record.status] || {};
         if (!text) return null;
-        
         return (
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className={`flex items-center text-sm font-bold ${color}`}>
                 <Icon className="h-5 w-5 mr-1"/>
@@ -112,11 +93,9 @@ const AttendanceTracker = () => {
                     className="input-field w-full md:w-auto bg-matrix-bg"
                 />
             </div>
-
             {error && <p className="text-red-500 mb-4">{`Error: ${error}`}</p>}
-            
             {loading ? (
-                <p className="animate-pulse text-center p-8">// Loading schedule for {currentDate.toDateString()}...</p>
+                <p className="animate-pulse text-center p-8">{'Loading schedule...'}</p>
             ) : (
                 <div className="space-y-4">
                     <AnimatePresence>
@@ -137,7 +116,6 @@ const AttendanceTracker = () => {
                                             </p>
                                             <p className="text-sm text-terminal-gray">{classInfo.time}</p>
                                         </div>
-                                        {/* Only show attendance controls if it's not a break */}
                                         {classInfo.type !== 'break' && (
                                             <div className="flex flex-col items-start md:items-end w-full md:w-auto">
                                                 <div className="mb-2 h-6">
@@ -151,10 +129,11 @@ const AttendanceTracker = () => {
                                             </div>
                                         )}
                                     </div>
+                                    {/* A correct JSX comment */}
                                 </motion.div>
                             ))
                         ) : (
-                            <p className="text-center p-8 text-terminal-gray">// No classes scheduled for this day.</p>
+                            <p className="text-center p-8 text-terminal-gray">{'No classes scheduled for this day.'}</p>
                         )}
                     </AnimatePresence>
                 </div>

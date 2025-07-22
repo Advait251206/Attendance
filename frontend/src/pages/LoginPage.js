@@ -8,7 +8,7 @@ const PasswordRequirements = () => (
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
     >
-        <p>// Password requires:</p>
+        <p>Password requires:</p>
         <ul className="list-disc list-inside pl-2">
             <li>At least 8 characters</li>
             <li>One uppercase letter (A-Z)</li>
@@ -80,13 +80,13 @@ const LoginPage = () => {
           {isRegisterMode ? 'CREATE_NEW_USER' : 'ACCESS_TERMINAL'}
         </h1>
         <p className="text-center text-terminal-gray">
-          {isRegisterMode ? '// Establish a new identity' : '// User Authentication Required'}
+          {isRegisterMode ? 'Establish a new identity' : 'User Authentication Required'}
         </p>
         
         <form onSubmit={handleSubmit} className="space-y-4 animate-fade-in">
           <div>
             <label className="block text-hacker-green">
-                {isRegisterMode ? '// USERNAME' : '// USERNAME or EMAIL'}
+                {isRegisterMode ? 'USERNAME' : 'USERNAME or EMAIL'}
             </label>
             <input
               type="text"
@@ -99,7 +99,7 @@ const LoginPage = () => {
 
           {isRegisterMode && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              <label className="block text-hacker-green">{'// EMAIL'}</label>
+              <label className="block text-hacker-green">{'EMAIL'}</label>
               <input
                 type="email"
                 value={email}
@@ -111,7 +111,7 @@ const LoginPage = () => {
           )}
 
           <div>
-              <label className="block text-hacker-green">{'// PASSWORD'}</label>
+              <label className="block text-hacker-green">{'PASSWORD'}</label>
               <input
                   type="password"
                   value={password}
@@ -124,7 +124,7 @@ const LoginPage = () => {
           
           {isRegisterMode && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              <label className="block text-hacker-green">{'// CONFIRM_PASSWORD'}</label>
+              <label className="block text-hacker-green">{'CONFIRM_PASSWORD'}</label>
               <input
                 type="password"
                 value={confirmPassword}
