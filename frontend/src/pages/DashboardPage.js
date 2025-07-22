@@ -1,13 +1,13 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid';
-import SubjectManager from '../components/SubjectManager'; // <-- IMPORT
+import AttendanceTracker from '../components/AttendanceTracker'; // Import the new main component
 
 const DashboardPage = () => {
   const { user, logout } = useAuth();
 
   return (
-    <div className="p-4 md:p-8 animate-fade-in">
+    <div className="p-4 md:p-8 animate-fade-in max-w-4xl mx-auto">
       <header className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-4xl">{'[DASHBOARD]'}</h1>
@@ -20,8 +20,8 @@ const DashboardPage = () => {
       </header>
 
       <main className="grid grid-cols-1 gap-8">
-        {/* Replace the old layout with our new component */}
-        <SubjectManager /> 
+        {/* The Attendance Tracker is now the main feature of the dashboard */}
+        <AttendanceTracker />
       </main>
     </div>
   );
