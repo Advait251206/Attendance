@@ -1,7 +1,7 @@
 from sqlalchemy import or_
 from sqlalchemy.orm import Session
 from . import models, schemas
-# Passlib context is no longer needed
+# passlib and CryptContext are no longer needed and have been removed.
 
 # --- User CRUD ---
 def get_user_by_username(db: Session, username: str):
@@ -11,11 +11,11 @@ def get_user_by_email(db: Session, email: str):
     return db.query(models.User).filter(models.User.email == email).first()
 
 def create_user(db: Session, user: schemas.UserCreate):
-    # The password is saved directly without hashing
+    # The password is saved directly to the database without hashing.
     db_user = models.User(
-        username=user.username, 
-        email=user.email, 
-        password=user.password 
+        username=user.username,
+        email=user.email,
+        password=user.password  # Storing the original password
     )
     db.add(db_user)
     db.commit()
@@ -23,6 +23,7 @@ def create_user(db: Session, user: schemas.UserCreate):
     return db_user
 
 def authenticate_user(db: Session, username_or_email: str, password: str) -> models.User | None:
+    # Find the user by either their username or email
     user = db.query(models.User).filter(
         or_(models.User.username == username_or_email, models.User.email == username_or_email)
     ).first()
@@ -30,7 +31,7 @@ def authenticate_user(db: Session, username_or_email: str, password: str) -> mod
     if not user:
         return None
     
-    # Simple string comparison instead of hash verification
+    # Compare the provided password directly with the one stored in the database.
     if user.password != password:
         return None
         

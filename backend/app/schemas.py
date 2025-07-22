@@ -1,5 +1,4 @@
-import re
-from pydantic import BaseModel, ConfigDict, Field, validator, EmailStr
+from pydantic import BaseModel, ConfigDict, EmailStr
 from typing import List, Optional
 from datetime import date
 from .models import AttendanceStatus
@@ -15,7 +14,7 @@ class SubjectCreate(SubjectBase):
 class Subject(SubjectBase):
     id: int
     owner_id: int
-    model_config = ConfigDict(from_attributes=True) # CORRECTED
+    model_config = ConfigDict(from_attributes=True)
 
 # --- Attendance Schemas ---
 class AttendanceBase(BaseModel):
@@ -33,30 +32,17 @@ class AttendanceUpdate(BaseModel):
 
 class Attendance(AttendanceBase):
     id: int
-    subject: Subject # Nesting the subject schema for richer responses
-    model_config = ConfigDict(from_attributes=True) # CORRECTED
+    subject: Subject
+    model_config = ConfigDict(from_attributes=True)
 
+# --- User Schemas ---
 class UserBase(BaseModel):
     username: str
-    email: EmailStr # <-- NEW
+    email: EmailStr
 
 class UserCreate(UserBase):
-    password: str = Field(..., min_length=8)
-    @validator('password')
-    def strong_password(cls, v):
-        """
-        A strong password must contain at least one uppercase letter,
-        one lowercase letter, one number, and one special character.
-        """
-        if not re.search(r'[A-Z]', v):
-            raise ValueError('Password must contain at least one uppercase letter')
-        if not re.search(r'[a-z]', v):
-            raise ValueError('Password must contain at least one lowercase letter')
-        if not re.search(r'[0-9]', v):
-            raise ValueError('Password must contain at least one number')
-        if not re.search(r'[@$!%*?&#]', v):
-            raise ValueError('Password must contain at least one special character (@$!%*?&#)')
-        return v
+    password: str
+    # The strong password validator has been removed.
 
 class User(UserBase):
     id: int
