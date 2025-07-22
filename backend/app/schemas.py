@@ -1,4 +1,5 @@
-from pydantic import BaseModel, ConfigDict, Field
+import re
+from pydantic import BaseModel, ConfigDict, Field, validator
 from typing import List, Optional
 from datetime import date
 from .models import AttendanceStatus
@@ -40,8 +41,21 @@ class UserBase(BaseModel):
     username: str
 
 class UserCreate(UserBase):
-    # Add a validation rule using Field
-    password: str = Field(..., min_length=8)
+    @validator('password')
+    def strong_password(cls, v):
+        """
+        A strong password must contain at least one uppercase letter,
+        one lowercase letter, one number, and one special character.
+        """
+        if not re.search(r'[A-Z]', v):
+            raise ValueError('Password must contain at least one uppercase letter')
+        if not re.search(r'[a-z]', v):
+            raise ValueError('Password must contain at least one lowercase letter')
+        if not re.search(r'[0-9]', v):
+            raise ValueError('Password must contain at least one number')
+        if not re.search(r'[@$!%*?&#]', v):
+            raise ValueError('Password must contain at least one special character (@$!%*?&#)')
+        return v
 
 class User(UserBase):
     id: int
