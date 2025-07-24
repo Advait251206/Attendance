@@ -1,3 +1,5 @@
+// frontend/src/components/AttendanceTracker.js
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CalendarDaysIcon, CheckCircleIcon, XCircleIcon, NoSymbolIcon, SunIcon } from '@heroicons/react/24/solid';
@@ -65,7 +67,7 @@ const AttendanceTracker = () => {
         const record = attendanceRecords.find(r => r.subject.name === subjectName);
         if (!record) return null;
         const statusMap = {
-            present: { text: 'Present', icon: CheckCircleIcon, color: 'text-cyber-blue' }, // Changed here
+            present: { text: 'Present', icon: CheckCircleIcon, color: 'text-cyber-blue' },
             absent: { text: 'Absent', icon: XCircleIcon, color: 'text-red-500' },
             cancelled: { text: 'Cancelled', icon: NoSymbolIcon, color: 'text-yellow-500' }
         };
@@ -129,6 +131,7 @@ const AttendanceTracker = () => {
                                             </div>
                                         )}
                                     </div>
+                                    {/* The incorrect comment that caused the build error has been removed from here. */}
                                 </motion.div>
                             ))
                         ) : (
