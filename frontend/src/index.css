@@ -22,9 +22,9 @@ body {
   background: #0a0a0a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #00C2FF; /* Cyber Blue */
+  background: #00FFFF; /* Cyber Blue */
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #009BCC; /* A darker shade for hover */
+  background: #00DCDC; /* A slightly darker cyan for hover */
 }

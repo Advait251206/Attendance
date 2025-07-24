@@ -18,7 +18,7 @@ const AttendanceTracker = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
-    const fetchData = useCallback(async () => {
+    const fetchData = useCallback(async () => { // <-- The period is removed here
         setLoading(true);
         setError('');
         const formattedDate = formatDateForAPI(currentDate);
@@ -131,7 +131,6 @@ const AttendanceTracker = () => {
                                             </div>
                                         )}
                                     </div>
-                                    {/* The incorrect comment that caused the build error has been removed from here. */}
                                 </motion.div>
                             ))
                         ) : (

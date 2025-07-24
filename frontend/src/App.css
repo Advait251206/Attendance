@@ -1,17 +1,16 @@
 /* frontend/src/App.css */
 
-/* We create a custom class named .card... */
+/* Base styling for card elements used throughout the app */
 .card {
-  /* ...and we build it by applying many small utility classes. */
   @apply bg-cyber-black border border-cyber-blue/50 rounded-lg p-6 shadow-lg shadow-cyber-blue/10;
 }
 
-/* We do the same for .input-field */
+/* Styling for input fields to match the new blue theme */
 .input-field {
-  @apply w-full bg-matrix-bg border border-cyber-blue/50 ...;
+  @apply w-full bg-matrix-bg border border-cyber-blue/50 rounded-md px-3 py-2 text-terminal-gray placeholder-terminal-gray/50 focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:border-transparent transition-all;
 }
 
-/* And for .btn-primary */
+/* Primary button style using the new blue */
 .btn-primary {
-  @apply bg-cyber-blue text-cyber-black font-bold ...;
+  @apply bg-cyber-blue text-cyber-black font-bold py-2 px-4 rounded-md hover:bg-opacity-80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-cyber-black focus:ring-cyber-blue disabled:opacity-50 disabled:cursor-not-allowed;
 }

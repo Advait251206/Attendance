@@ -1,3 +1,5 @@
+// frontend/src/components/SubjectManager.js
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpenIcon, PlusIcon } from '@heroicons/react/24/solid';

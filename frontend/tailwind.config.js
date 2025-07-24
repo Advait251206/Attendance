@@ -11,8 +11,8 @@ module.exports = {
         'fira-code': ['"Fira Code"', 'monospace'],
       },
       colors: {
-        // --- NEW: Replaced green with a vibrant blue ---
-        'cyber-blue': '#00C2FF', // A bright, electric blue
+        // --- NEW: Replaced green with a vibrant, classic cyber blue ---
+        'cyber-blue': '#00FFFF', // A bright, electric cyan/aqua
         'matrix-bg': '#0d0208',
         'cyber-black': '#0a0a0a',
         'terminal-gray': '#b2b2b2',
