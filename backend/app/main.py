@@ -15,30 +15,26 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# --- Define the specific URLs of your frontend environments ---
-# This list tells your backend which frontend URLs are allowed to make requests.
+# --- CORS Configuration ---
 origins = [
-    # The URL of your live frontend on Vercel (from your video)
     "https://attendance-omega-sand.vercel.app", 
-    
-    # The URL for your development frontend in GitHub Codespaces
     "https://fuzzy-palm-tree-97qrwvppr9g7f7pv9-3000.app.github.dev", 
-    
-    # A good practice is to also include the localhost for local testing
     "http://localhost:3000",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins, # Use the specific list of allowed origins
+    allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"], # Allow all methods (GET, POST, etc.)
-    allow_headers=["*"], # Allow all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
-# Include the routers for authentication and attendance
-app.include_router(auth.router)
-app.include_router(attendance.router)
+# --- API Routers ---
+# We are adding the /api prefix here, in the main app.
+# Now all routes from auth.py and attendance.py will start with /api
+app.include_router(auth.router, prefix="/api")
+app.include_router(attendance.router, prefix="/api")
 
 @app.get("/", tags=["Root"])
 async def read_root():

@@ -1,3 +1,5 @@
+# backend/app/routers/attendance.py
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from typing import List
@@ -5,10 +7,10 @@ from datetime import date
 
 from .. import crud, models, schemas
 from ..database import get_db
-from ..security import get_current_active_user # <-- CORRECTED IMPORT
+from ..security import get_current_active_user
 
-router = APIRouter(prefix="/api", tags=["Attendance System"]) # Added /api prefix for clarity
-
+# The prefix is now handled in main.py, so we remove it from here.
+router = APIRouter(tags=["Attendance System"])
 
 # --- Subjects Endpoints ---
 @router.post("/subjects/", response_model=schemas.Subject, status_code=status.HTTP_201_CREATED)
@@ -19,7 +21,7 @@ def create_subject_for_user(
 ):
     return crud.create_user_subject(db=db, subject=subject, user_id=current_user.id)
 
-
+# ... (rest of the file is unchanged) ...
 @router.get("/subjects/", response_model=List[schemas.Subject])
 def read_subjects(
     current_user: models.User = Depends(get_current_active_user),
@@ -72,7 +74,7 @@ def delete_attendance(
 ):
     if not crud.delete_attendance_record(db, attendance_id, current_user.id):
         raise HTTPException(status_code=404, detail="Attendance record not found")
-    return {"detail": "Record deleted successfully"} # FastAPI returns 204 so this won't be sent
+    return {"detail": "Record deleted successfully"}
 
 
 # --- Dashboard/Stats Endpoint ---
@@ -81,10 +83,8 @@ def get_stats_summary(
     current_user: models.User = Depends(get_current_active_user),
     db: Session = Depends(get_db)
 ):
-    # This logic can be moved to crud.py for better organization
     records = db.query(models.Attendance).filter(models.Attendance.owner_id == current_user.id).all()
     
-    # Exclude cancelled and exchanged classes from percentage calculation
     valid_records = [r for r in records if r.status in (models.AttendanceStatus.PRESENT, models.AttendanceStatus.ABSENT)]
     total_classes = len(valid_records)
     
