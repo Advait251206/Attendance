@@ -6,23 +6,21 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import DashboardPage from './pages/DashboardPage';
 import LoginPage from './pages/LoginPage';
 
-// This is a special component that protects routes that require a user to be logged in.
-// If the user is not logged in, it redirects them to the login page.
+// This component protects routes that require a user to be logged in.
 const PrivateRoute = ({ children }) => {
   const { user } = useAuth();
   return user ? children : <Navigate to="/login" />;
 };
 
-// This component handles the main routing logic of the app.
+// This component handles the main routing logic.
 const AppRoutes = () => {
   const { user, loading } = useAuth();
 
-  // Show a loading indicator while the app is checking for an existing session.
+  // Show a loading message while checking for an existing session.
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        {/* The invalid comment was here. It has now been removed. */}
-        <p className="animate-pulse text-2xl text-cyber-blue">Initializing Secure Connection...</p>
+        <p className="animate-pulse text-2xl text-hacker-green">// Initializing Secure Connection...</p>
       </div>
     );
   }
@@ -50,6 +48,7 @@ function App() {
   return (
     <Router>
       <AuthProvider>
+        {/* This div is crucial for the overall theme and layout */}
         <div className="bg-matrix-bg text-terminal-gray min-h-screen font-fira-code">
           <AppRoutes />
         </div>
