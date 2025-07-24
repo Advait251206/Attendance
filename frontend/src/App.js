@@ -21,7 +21,8 @@ const AppRoutes = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <p className="animate-pulse text-2xl text-hacker-green">// Initializing Secure Connection...</p>
+        {/* The invalid comment was here. It has now been removed. */}
+        <p className="animate-pulse text-2xl text-cyber-blue">Initializing Secure Connection...</p>
       </div>
     );
   }
