@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpenIcon, PlusIcon } from '@heroicons/react/24/solid';
-import { secureApiClient } from '../api/axios'; // Use the secure client
+import { secureApiClient } from '../api/axios';
 
 const SubjectManager = () => {
   const [subjects, setSubjects] = useState([]);
@@ -10,7 +10,6 @@ const SubjectManager = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
 
-  // Fetch subjects when the component loads
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
@@ -25,7 +24,6 @@ const SubjectManager = () => {
     fetchSubjects();
   }, []);
 
-  // Handle adding a new subject
   const handleAddSubject = async (e) => {
     e.preventDefault();
     if (!newSubjectName) {
@@ -37,7 +35,7 @@ const SubjectManager = () => {
         name: newSubjectName,
         professor: newProfessor,
       });
-      setSubjects([...subjects, response.data]); // Add new subject to the list
+      setSubjects([...subjects, response.data]);
       setNewSubjectName('');
       setNewProfessor('');
       setError('');
@@ -57,7 +55,6 @@ const SubjectManager = () => {
         {'// My Subjects'}
       </h2>
 
-      {/* Form to add a new subject */}
       <form onSubmit={handleAddSubject} className="flex flex-col md:flex-row gap-4 mb-6">
         <input
           type="text"
@@ -80,19 +77,18 @@ const SubjectManager = () => {
       </form>
       {error && <p className="text-red-500 mb-4">{`Error: ${error}`}</p>}
 
-      {/* List of existing subjects */}
       <div className="space-y-3">
         <AnimatePresence>
           {subjects.length > 0 ? (
             subjects.map((subject) => (
               <motion.div
                 key={subject.id}
-                className="bg-matrix-bg p-3 rounded-md border border-hacker-green/30 flex justify-between items-center"
+                className="bg-matrix-bg p-3 rounded-md border border-cyber-blue/30 flex justify-between items-center"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 50 }}
               >
-                <p className="font-bold text-hacker-green">{subject.name}</p>
+                <p className="font-bold text-cyber-blue">{subject.name}</p>
                 <p className="text-sm text-terminal-gray">{subject.professor}</p>
               </motion.div>
             ))

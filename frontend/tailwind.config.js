@@ -1,3 +1,5 @@
+// frontend/tailwind.config.js
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,7 +11,8 @@ module.exports = {
         'fira-code': ['"Fira Code"', 'monospace'],
       },
       colors: {
-        'hacker-green': '#00ff41',
+        // --- NEW: Replaced green with a vibrant blue ---
+        'cyber-blue': '#00C2FF', // A bright, electric blue
         'matrix-bg': '#0d0208',
         'cyber-black': '#0a0a0a',
         'terminal-gray': '#b2b2b2',

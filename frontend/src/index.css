@@ -1,54 +1,30 @@
-/* Import the Google Font defined in tailwind.config.js */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+/* frontend/src/index.css */
 
-/* These are the essential Tailwind directives. They MUST come first. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 
-  These are your custom "base" and "component" styles.
-  Using the @layer directive is best practice.
-*/
-@layer base {
-  body {
-    @apply bg-matrix-bg text-terminal-gray font-fira-code;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply text-hacker-green font-bold;
-  }
+/* Import Fira Code font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
-  input, button {
-    @apply font-fira-code;
-  }
-
-  /* Custom scrollbar for the hacker look */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #0a0a0a;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-hacker-green;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-green-400; /* A slightly different green for hover */
-  }
+/* Apply base styles to the body for a consistent look */
+body {
+  @apply bg-matrix-bg text-terminal-gray font-fira-code;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@layer components {
-  .card {
-    @apply bg-cyber-black border border-hacker-green/20 rounded-lg p-4 shadow-lg shadow-hacker-green/10;
-  }
-  .btn-primary {
-    @apply bg-hacker-green text-cyber-black font-bold py-2 px-4 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-hacker-green/40 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-  .input-field {
-    @apply w-full bg-transparent border-2 border-hacker-green/50 rounded-md p-2 text-hacker-green focus:outline-none focus:ring-2 focus:ring-hacker-green focus:border-transparent transition-all;
-  }
+/* Custom scrollbar with the new blue theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #00C2FF; /* Cyber Blue */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #009BCC; /* A darker shade for hover */
 }

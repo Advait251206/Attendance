@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const PasswordRequirements = () => (
     <motion.div 
-        className="text-xs text-terminal-gray/70 space-y-1 mt-2 p-2 border border-hacker-green/20 rounded-md"
+        className="text-xs text-terminal-gray/70 space-y-1 mt-2 p-2 border border-cyber-blue/20 rounded-md"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
     >
@@ -28,23 +28,18 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
-  
-  // State to manage the loading indicator on the button
   const [isProcessing, setIsProcessing] = useState(false);
-  
   const { login, register } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    setIsProcessing(true); // Set loading to true when the form is submitted
+    setIsProcessing(true);
 
     try {
       if (isRegisterMode) {
         if (password !== confirmPassword) {
           setError('Passwords do not match.');
-          // We return here but keep isProcessing true so the user can see the error
-          // and it will be reset on the next action.
           setIsProcessing(false);
           return;
         }
@@ -62,7 +57,6 @@ const LoginPage = () => {
         setError(err.response?.data?.detail || (isRegisterMode ? 'Registration failed.' : 'Login failed.'));
       }
     } finally {
-      // Set loading back to false after the API call finishes (either success or fail)
       setIsProcessing(false); 
     }
   };
@@ -93,7 +87,7 @@ const LoginPage = () => {
         
         <form onSubmit={handleSubmit} className="space-y-4 animate-fade-in">
           <div>
-            <label className="block text-hacker-green">
+            <label className="block text-cyber-blue">
                 {isRegisterMode ? 'USERNAME' : 'USERNAME or EMAIL'}
             </label>
             <input
@@ -107,7 +101,7 @@ const LoginPage = () => {
 
           {isRegisterMode && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              <label className="block text-hacker-green">{'EMAIL'}</label>
+              <label className="block text-cyber-blue">{'EMAIL'}</label>
               <input
                 type="email"
                 value={email}
@@ -119,7 +113,7 @@ const LoginPage = () => {
           )}
 
           <div>
-              <label className="block text-hacker-green">{'PASSWORD'}</label>
+              <label className="block text-cyber-blue">{'PASSWORD'}</label>
               <input
                   type="password"
                   value={password}
@@ -132,7 +126,7 @@ const LoginPage = () => {
           
           {isRegisterMode && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              <label className="block text-hacker-green">{'CONFIRM_PASSWORD'}</label>
+              <label className="block text-cyber-blue">{'CONFIRM_PASSWORD'}</label>
               <input
                 type="password"
                 value={confirmPassword}
@@ -143,7 +137,6 @@ const LoginPage = () => {
             </motion.div>
           )}
 
-          {/* This button is now disabled and shows a loading message while processing */}
           <button type="submit" className="w-full btn-primary" disabled={isProcessing}>
             {isProcessing
               ? (isRegisterMode ? 'CREATING_ACCOUNT...' : 'INITIATING_SESSION...')
@@ -154,7 +147,7 @@ const LoginPage = () => {
         {error && <p className="text-red-500 text-center animate-fade-in">{`Error: ${error}`}</p>}
         
         <div className="text-center">
-          <button onClick={toggleMode} className="text-sm text-hacker-green hover:underline focus:outline-none" disabled={isProcessing}>
+          <button onClick={toggleMode} className="text-sm text-cyber-blue hover:underline focus:outline-none" disabled={isProcessing}>
             {isRegisterMode ? 'Already have an account? Login.' : 'Need an account? Register.'}
           </button>
         </div>
