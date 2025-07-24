@@ -1,3 +1,5 @@
+// frontend/src/pages/LoginPage.js
+
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { motion } from 'framer-motion';
@@ -27,35 +29,41 @@ const LoginPage = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   
+  // State to manage the loading indicator on the button
+  const [isProcessing, setIsProcessing] = useState(false);
+  
   const { login, register } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setIsProcessing(true); // Set loading to true when the form is submitted
 
-    if (isRegisterMode) {
-      if (password !== confirmPassword) {
-        setError('Passwords do not match.');
-        return;
-      }
-      try {
-        await register(username, email, password); 
-      } catch (err) {
-        if (err.response && err.response.data && Array.isArray(err.response.data.detail)) {
-          const firstError = err.response.data.detail[0];
-          const field = firstError.loc[1];
-          const message = firstError.msg;
-          setError(`Validation Error -> ${field}: ${message}`);
-        } else {
-          setError(err.response?.data?.detail || 'Registration failed.');
+    try {
+      if (isRegisterMode) {
+        if (password !== confirmPassword) {
+          setError('Passwords do not match.');
+          // We return here but keep isProcessing true so the user can see the error
+          // and it will be reset on the next action.
+          setIsProcessing(false);
+          return;
         }
-      }
-    } else {
-      try {
+        await register(username, email, password); 
+      } else {
         await login(username, password);
-      } catch (err) {
-        setError(err.response?.data?.detail || 'Login failed.');
       }
+    } catch (err) {
+      if (err.response && err.response.data && Array.isArray(err.response.data.detail)) {
+        const firstError = err.response.data.detail[0];
+        const field = firstError.loc[1];
+        const message = firstError.msg;
+        setError(`Validation Error -> ${field}: ${message}`);
+      } else {
+        setError(err.response?.data?.detail || (isRegisterMode ? 'Registration failed.' : 'Login failed.'));
+      }
+    } finally {
+      // Set loading back to false after the API call finishes (either success or fail)
+      setIsProcessing(false); 
     }
   };
 
@@ -135,15 +143,18 @@ const LoginPage = () => {
             </motion.div>
           )}
 
-          <button type="submit" className="w-full btn-primary">
-            {isRegisterMode ? '[CREATE_ACCOUNT]' : '[INITIATE_SESSION]'}
+          {/* This button is now disabled and shows a loading message while processing */}
+          <button type="submit" className="w-full btn-primary" disabled={isProcessing}>
+            {isProcessing
+              ? (isRegisterMode ? 'CREATING_ACCOUNT...' : 'INITIATING_SESSION...')
+              : (isRegisterMode ? '[CREATE_ACCOUNT]' : '[INITIATE_SESSION]')}
           </button>
         </form>
 
         {error && <p className="text-red-500 text-center animate-fade-in">{`Error: ${error}`}</p>}
         
         <div className="text-center">
-          <button onClick={toggleMode} className="text-sm text-hacker-green hover:underline focus:outline-none">
+          <button onClick={toggleMode} className="text-sm text-hacker-green hover:underline focus:outline-none" disabled={isProcessing}>
             {isRegisterMode ? 'Already have an account? Login.' : 'Need an account? Register.'}
           </button>
         </div>
