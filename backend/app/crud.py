@@ -1,7 +1,8 @@
+# backend/app/crud.py
+
 from sqlalchemy import or_
 from sqlalchemy.orm import Session
 from . import models, schemas
-# passlib and CryptContext are no longer needed and have been removed.
 
 # --- User CRUD ---
 def get_user_by_username(db: Session, username: str):
@@ -11,11 +12,14 @@ def get_user_by_email(db: Session, email: str):
     return db.query(models.User).filter(models.User.email == email).first()
 
 def create_user(db: Session, user: schemas.UserCreate):
-    # The password is saved directly to the database without hashing.
+    """
+    Creates a new user in the database with a plaintext password.
+    WARNING: This is for testing only and is not secure.
+    """
     db_user = models.User(
         username=user.username,
         email=user.email,
-        password=user.password  # Storing the original password
+        password=user.password  # Storing the original plaintext password
     )
     db.add(db_user)
     db.commit()
@@ -23,7 +27,10 @@ def create_user(db: Session, user: schemas.UserCreate):
     return db_user
 
 def authenticate_user(db: Session, username_or_email: str, password: str) -> models.User | None:
-    # Find the user by either their username or email
+    """
+    Authenticates a user by comparing the provided plaintext password
+    with the one stored in the database.
+    """
     user = db.query(models.User).filter(
         or_(models.User.username == username_or_email, models.User.email == username_or_email)
     ).first()
@@ -31,7 +38,7 @@ def authenticate_user(db: Session, username_or_email: str, password: str) -> mod
     if not user:
         return None
     
-    # Compare the provided password directly with the one stored in the database.
+    # Direct string comparison for plaintext passwords
     if user.password != password:
         return None
         
