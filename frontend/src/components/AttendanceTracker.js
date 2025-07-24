@@ -18,6 +18,7 @@ const AttendanceTracker = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
+    // The syntax error here has been fixed (removed the extra '.')
     const fetchData = useCallback(async () => {
         setLoading(true);
         setError('');

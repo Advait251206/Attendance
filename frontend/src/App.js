@@ -6,21 +6,21 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import DashboardPage from './pages/DashboardPage';
 import LoginPage from './pages/LoginPage';
 
-// This component protects routes that require a user to be logged in.
+// This is a special component that protects routes that require a user to be logged in.
 const PrivateRoute = ({ children }) => {
   const { user } = useAuth();
   return user ? children : <Navigate to="/login" />;
 };
 
-// This component handles the main routing logic.
+// This component handles the main routing logic of the app.
 const AppRoutes = () => {
   const { user, loading } = useAuth();
 
-  // Show a loading message while checking for an existing session.
+  // Show a loading indicator while the app is checking for an existing session.
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        {/* THE PREVIOUS ERROR WAS HERE. THE TEXT NOW CORRECTLY DISPLAYS WITHOUT THE INVALID '//' COMMENT. */}
+        {/* The invalid comment text has been removed from here */}
         <p className="animate-pulse text-2xl text-hacker-green">Initializing Secure Connection...</p>
       </div>
     );

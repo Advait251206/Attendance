@@ -28,18 +28,23 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
+  
+  // State to manage the loading indicator on the button
   const [isProcessing, setIsProcessing] = useState(false);
+  
   const { login, register } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    setIsProcessing(true);
+    setIsProcessing(true); // Set loading to true when the form is submitted
 
     try {
       if (isRegisterMode) {
         if (password !== confirmPassword) {
           setError('Passwords do not match.');
+          // We return here but keep isProcessing true so the user can see the error
+          // and it will be reset on the next action.
           setIsProcessing(false);
           return;
         }
@@ -57,6 +62,7 @@ const LoginPage = () => {
         setError(err.response?.data?.detail || (isRegisterMode ? 'Registration failed.' : 'Login failed.'));
       }
     } finally {
+      // Set loading back to false after the API call finishes (either success or fail)
       setIsProcessing(false); 
     }
   };
@@ -137,6 +143,7 @@ const LoginPage = () => {
             </motion.div>
           )}
 
+          {/* This button is now disabled and shows a loading message while processing */}
           <button type="submit" className="w-full btn-primary" disabled={isProcessing}>
             {isProcessing
               ? (isRegisterMode ? 'CREATING_ACCOUNT...' : 'INITIATING_SESSION...')

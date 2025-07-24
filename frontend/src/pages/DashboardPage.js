@@ -1,9 +1,7 @@
-// frontend/src/pages/DashboardPage.js
-
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid';
-import AttendanceTracker from '../components/AttendanceTracker';
+import AttendanceTracker from '../components/AttendanceTracker'; // Import the new main component
 
 const DashboardPage = () => {
   const { user, logout } = useAuth();
@@ -22,6 +20,7 @@ const DashboardPage = () => {
       </header>
 
       <main className="grid grid-cols-1 gap-8">
+        {/* The Attendance Tracker is now the main feature of the dashboard */}
         <AttendanceTracker />
       </main>
     </div>
