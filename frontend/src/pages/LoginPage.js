@@ -1,5 +1,3 @@
-// frontend/src/pages/LoginPage.js
-
 import React, { useState, useEffect, useMemo } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { motion } from 'framer-motion';
@@ -88,12 +86,8 @@ const LoginPage = () => {
       }
     } catch (err) {
       if (err.response) {
-        // Handle specific validation errors from the backend (like duplicate user)
-        if (err.response.status === 400 || err.response.status === 422) {
-          setError(err.response.data.detail || 'Validation failed.');
-        } else {
-          setError(err.response.data.detail || (isRegisterMode ? 'Registration failed.' : 'Login failed.'));
-        }
+        // This will now correctly display "Username already registered" etc.
+        setError(err.response.data.detail || 'An unknown error occurred.');
       } else {
         setError('An unexpected network error occurred.');
       }

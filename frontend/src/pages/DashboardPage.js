@@ -11,7 +11,7 @@ const DashboardPage = () => {
       <header className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-4xl">{'[DASHBOARD]'}</h1>
-          <p className="text-terminal-gray">Welcome, user: <span className="text-hacker-green">{user?.username}</span></p>
+          <p className="text-terminal-gray">Welcome, User: <span className="text-hacker-green">{user?.username}</span></p>
         </div>
         <button onClick={logout} className="flex items-center space-x-2 text-red-500 hover:text-red-400 transition-colors">
             <ArrowLeftOnRectangleIcon className="h-6 w-6" />

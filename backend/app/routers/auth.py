@@ -1,10 +1,9 @@
-# backend/app/routers/auth.py
-
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from datetime import timedelta
+from sqlalchemy.exc import IntegrityError # Import the specific database exception
 
 from .. import crud, models, schemas
 from ..database import get_db
@@ -14,30 +13,36 @@ router = APIRouter(prefix="/auth", tags=["Authentication"])
 
 @router.post("/register", response_model=schemas.User, status_code=status.HTTP_201_CREATED)
 def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
-    """Handles new user registration, checking for unique username and email."""
+    """Handles new user registration with specific error handling."""
+    
+    # --- CHECKS ARE NOW OUTSIDE THE TRY BLOCK ---
+    # This allows their specific HTTPException to be sent directly to the user.
+    if crud.get_user_by_username(db, username=user.username):
+        raise HTTPException(status_code=400, detail="Username already registered")
+    if crud.get_user_by_email(db, email=user.email):
+        raise HTTPException(status_code=400, detail="Email already registered")
+    
+    # --- THE TRY BLOCK NOW ONLY PROTECTS THE DATABASE OPERATION ---
+    # This is the correct pattern. We only catch unexpected crashes.
     try:
-        # Check for existing username
-        if crud.get_user_by_username(db, username=user.username):
-            raise HTTPException(status_code=400, detail="Username already registered")
-        # Check for existing email
-        if crud.get_user_by_email(db, email=user.email):
-            raise HTTPException(status_code=400, detail="Email already registered")
-        
-        print(f"Attempting to create user: {user.username}")
         created_user = crud.create_user(db=db, user=user)
-        print(f"SUCCESS: User {user.username} created.")
         return created_user
-        
+    except IntegrityError:
+        # This is a fallback in case two users try to register at the exact same time.
+        db.rollback()
+        raise HTTPException(
+            status_code=409, # 409 Conflict is more appropriate here
+            detail="Username or email already exists."
+        )
     except Exception as e:
-        print("--- USER REGISTRATION FAILED ---")
-        print(f"An unexpected error occurred during user registration for {user.username}.")
-        print(f"Exception Type: {type(e).__name__}")
-        print(f"Exception Details: {e}")
-        # Re-raise as a generic 500 error to the client
+        # This will catch any other unexpected server errors.
+        db.rollback()
+        print(f"An unexpected error occurred during user creation: {e}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="An internal error occurred during registration."
+            detail="An internal server error occurred during registration."
         )
+
 
 @router.post("/token", response_model=schemas.Token)
 async def login_for_access_token(
