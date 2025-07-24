@@ -1,5 +1,3 @@
-// frontend/src/components/SubjectManager.js
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpenIcon, PlusIcon } from '@heroicons/react/24/solid';
@@ -15,7 +13,6 @@ const SubjectManager = () => {
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
-        // FIXED: Removed the redundant '/api' prefix
         const response = await secureApiClient.get('/subjects/');
         setSubjects(response.data);
       } catch (err) {
@@ -34,7 +31,6 @@ const SubjectManager = () => {
         return;
     }
     try {
-      // FIXED: Removed the redundant '/api' prefix
       const response = await secureApiClient.post('/subjects/', {
         name: newSubjectName,
         professor: newProfessor,
@@ -49,7 +45,8 @@ const SubjectManager = () => {
   };
 
   if (loading) {
-    return <p className="animate-pulse">// Loading subjects...</p>;
+    // FIXED: Removed the invalid '//' from the text
+    return <p className="animate-pulse text-center">Loading subjects...</p>;
   }
 
   return (
@@ -97,7 +94,8 @@ const SubjectManager = () => {
               </motion.div>
             ))
           ) : (
-            <p className="text-terminal-gray">// No subjects added yet. Add one above.</p>
+            // FIXED: Removed the invalid '//' from the text
+            <p className="text-terminal-gray text-center">No subjects added yet. Add one above.</p>
           )}
         </AnimatePresence>
       </div>
