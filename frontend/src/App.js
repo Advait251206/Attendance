@@ -20,6 +20,7 @@ const AppRoutes = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
+        {/* The invalid comment has been removed from the line below. */}
         <p className="animate-pulse text-2xl text-hacker-green">// Initializing Secure Connection...</p>
       </div>
     );
@@ -48,7 +49,6 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        {/* This div is crucial for the overall theme and layout */}
         <div className="bg-matrix-bg text-terminal-gray min-h-screen font-fira-code">
           <AppRoutes />
         </div>
