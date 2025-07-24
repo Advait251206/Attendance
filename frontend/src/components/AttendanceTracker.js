@@ -87,7 +87,7 @@ const AttendanceTracker = () => {
             <div className="flex flex-col md:flex-row justify-between items-center mb-6">
                 <h2 className="text-2xl mb-4 md:mb-0 flex items-center">
                     <CalendarDaysIcon className="h-6 w-6 mr-2" />
-                    {'// Daily Log'}
+                    {'Daily Log'}
                 </h2>
                 <input
                     type="date"
