@@ -85,12 +85,12 @@ const SubjectManager = () => {
             subjects.map((subject) => (
               <motion.div
                 key={subject.id}
-                className="bg-matrix-bg p-3 rounded-md border border-cyber-blue/30 flex justify-between items-center"
+                className="bg-matrix-bg p-3 rounded-md border border-hacker-green/30 flex justify-between items-center"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 50 }}
               >
-                <p className="font-bold text-cyber-blue">{subject.name}</p>
+                <p className="font-bold text-hacker-green">{subject.name}</p>
                 <p className="text-sm text-terminal-gray">{subject.professor}</p>
               </motion.div>
             ))

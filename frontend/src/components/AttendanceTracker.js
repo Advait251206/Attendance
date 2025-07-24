@@ -18,7 +18,7 @@ const AttendanceTracker = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
-    const fetchData = useCallback(async () => { // <-- The period is removed here
+    const fetchData = useCallback(async () => {
         setLoading(true);
         setError('');
         const formattedDate = formatDateForAPI(currentDate);
@@ -67,7 +67,7 @@ const AttendanceTracker = () => {
         const record = attendanceRecords.find(r => r.subject.name === subjectName);
         if (!record) return null;
         const statusMap = {
-            present: { text: 'Present', icon: CheckCircleIcon, color: 'text-cyber-blue' },
+            present: { text: 'Present', icon: CheckCircleIcon, color: 'text-hacker-green' },
             absent: { text: 'Absent', icon: XCircleIcon, color: 'text-red-500' },
             cancelled: { text: 'Cancelled', icon: NoSymbolIcon, color: 'text-yellow-500' }
         };
@@ -105,14 +105,14 @@ const AttendanceTracker = () => {
                             scheduleForToday.map((classInfo, index) => (
                                 <motion.div
                                     key={index}
-                                    className={`p-4 rounded-lg border ${classInfo.type === 'break' ? 'border-dashed border-terminal-gray/30 bg-matrix-bg/50' : 'border-cyber-blue/30 bg-matrix-bg hover:border-cyber-blue/80'} transition-all`}
+                                    className={`p-4 rounded-lg border ${classInfo.type === 'break' ? 'border-dashed border-terminal-gray/30 bg-matrix-bg/50' : 'border-hacker-green/30 bg-matrix-bg hover:border-hacker-green/80'} transition-all`}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.05 }}
                                 >
                                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                                         <div className="mb-4 md:mb-0">
-                                            <p className={`font-bold text-lg ${classInfo.type === 'break' ? 'text-yellow-400' : 'text-cyber-blue'}`}>
+                                            <p className={`font-bold text-lg ${classInfo.type === 'break' ? 'text-yellow-400' : 'text-hacker-green'}`}>
                                                 {classInfo.type === 'break' && <SunIcon className="h-5 w-5 inline-block mr-2" />}
                                                 {classInfo.name}
                                             </p>

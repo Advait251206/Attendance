@@ -1,16 +1,16 @@
 /* frontend/src/App.css */
 
-/* Base styling for card elements used throughout the app */
+/* Base styling for card elements using the hacker theme */
 .card {
-  @apply bg-cyber-black border border-cyber-blue/50 rounded-lg p-6 shadow-lg shadow-cyber-blue/10;
+  @apply bg-cyber-black border border-hacker-green/50 rounded-lg p-6 shadow-lg shadow-hacker-green/10;
 }
 
-/* Styling for input fields to match the new blue theme */
+/* Styling for input fields to match the hacker theme */
 .input-field {
-  @apply w-full bg-matrix-bg border border-cyber-blue/50 rounded-md px-3 py-2 text-terminal-gray placeholder-terminal-gray/50 focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:border-transparent transition-all;
+  @apply w-full bg-matrix-bg border border-hacker-green/50 rounded-md px-3 py-2 text-terminal-gray placeholder-terminal-gray/50 focus:outline-none focus:ring-2 focus:ring-hacker-green focus:border-transparent transition-all;
 }
 
-/* Primary button style using the new blue */
+/* Primary button style */
 .btn-primary {
-  @apply bg-cyber-blue text-cyber-black font-bold py-2 px-4 rounded-md hover:bg-opacity-80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-cyber-black focus:ring-cyber-blue disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply bg-hacker-green text-cyber-black font-bold py-2 px-4 rounded-md hover:bg-opacity-80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-cyber-black focus:ring-hacker-green disabled:opacity-50 disabled:cursor-not-allowed;
 }

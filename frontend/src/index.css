@@ -14,7 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar with the new blue theme */
+/* Custom scrollbar with the original green theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -22,9 +22,9 @@ body {
   background: #0a0a0a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #00FFFF; /* Cyber Blue */
+  background: #00ff41; /* hacker-green */
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00DCDC; /* A slightly darker cyan for hover */
+  background: #00cc34; /* A darker green for hover */
 }

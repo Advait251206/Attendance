@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const PasswordRequirements = () => (
     <motion.div 
-        className="text-xs text-terminal-gray/70 space-y-1 mt-2 p-2 border border-cyber-blue/20 rounded-md"
+        className="text-xs text-terminal-gray/70 space-y-1 mt-2 p-2 border border-hacker-green/20 rounded-md"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
     >
@@ -87,7 +87,7 @@ const LoginPage = () => {
         
         <form onSubmit={handleSubmit} className="space-y-4 animate-fade-in">
           <div>
-            <label className="block text-cyber-blue">
+            <label className="block text-hacker-green">
                 {isRegisterMode ? 'USERNAME' : 'USERNAME or EMAIL'}
             </label>
             <input
@@ -101,7 +101,7 @@ const LoginPage = () => {
 
           {isRegisterMode && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              <label className="block text-cyber-blue">{'EMAIL'}</label>
+              <label className="block text-hacker-green">{'EMAIL'}</label>
               <input
                 type="email"
                 value={email}
@@ -113,7 +113,7 @@ const LoginPage = () => {
           )}
 
           <div>
-              <label className="block text-cyber-blue">{'PASSWORD'}</label>
+              <label className="block text-hacker-green">{'PASSWORD'}</label>
               <input
                   type="password"
                   value={password}
@@ -126,7 +126,7 @@ const LoginPage = () => {
           
           {isRegisterMode && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              <label className="block text-cyber-blue">{'CONFIRM_PASSWORD'}</label>
+              <label className="block text-hacker-green">{'CONFIRM_PASSWORD'}</label>
               <input
                 type="password"
                 value={confirmPassword}
@@ -147,7 +147,7 @@ const LoginPage = () => {
         {error && <p className="text-red-500 text-center animate-fade-in">{`Error: ${error}`}</p>}
         
         <div className="text-center">
-          <button onClick={toggleMode} className="text-sm text-cyber-blue hover:underline focus:outline-none" disabled={isProcessing}>
+          <button onClick={toggleMode} className="text-sm text-hacker-green hover:underline focus:outline-none" disabled={isProcessing}>
             {isRegisterMode ? 'Already have an account? Login.' : 'Need an account? Register.'}
           </button>
         </div>
