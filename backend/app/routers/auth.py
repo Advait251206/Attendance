@@ -1,3 +1,5 @@
+# backend/app/routers/auth.py
+
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
@@ -13,22 +15,35 @@ router = APIRouter(prefix="/auth", tags=["Authentication"])
 @router.post("/register", response_model=schemas.User, status_code=status.HTTP_201_CREATED)
 def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     """Handles new user registration, checking for unique username and email."""
-    # Check for existing username
-    if crud.get_user_by_username(db, username=user.username):
-        raise HTTPException(status_code=400, detail="Username already registered")
-    # Check for existing email
-    if crud.get_user_by_email(db, email=user.email):
-        raise HTTPException(status_code=400, detail="Email already registered")
-    
-    return crud.create_user(db=db, user=user)
-
+    try:
+        # Check for existing username
+        if crud.get_user_by_username(db, username=user.username):
+            raise HTTPException(status_code=400, detail="Username already registered")
+        # Check for existing email
+        if crud.get_user_by_email(db, email=user.email):
+            raise HTTPException(status_code=400, detail="Email already registered")
+        
+        print(f"Attempting to create user: {user.username}")
+        created_user = crud.create_user(db=db, user=user)
+        print(f"SUCCESS: User {user.username} created.")
+        return created_user
+        
+    except Exception as e:
+        print("--- USER REGISTRATION FAILED ---")
+        print(f"An unexpected error occurred during user registration for {user.username}.")
+        print(f"Exception Type: {type(e).__name__}")
+        print(f"Exception Details: {e}")
+        # Re-raise as a generic 500 error to the client
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="An internal error occurred during registration."
+        )
 
 @router.post("/token", response_model=schemas.Token)
 async def login_for_access_token(
     form_data: Annotated[OAuth2PasswordRequestForm, Depends()], db: Session = Depends(get_db)
 ):
     """Handles user login with either username or email."""
-    # The form's 'username' field can contain either a username or an email
     user = crud.authenticate_user(db, username_or_email=form_data.username, password=form_data.password)
     
     if not user:
