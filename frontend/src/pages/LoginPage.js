@@ -1,3 +1,5 @@
+// frontend/src/pages/LoginPage.js
+
 import React, { useState, useEffect, useMemo } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { motion } from 'framer-motion';
@@ -44,7 +46,6 @@ const LoginPage = () => {
   const [error, setError] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
 
-  // State for real-time password validation
   const [passwordValidation, setPasswordValidation] = useState({
     length: false,
     uppercase: false,
@@ -55,14 +56,12 @@ const LoginPage = () => {
 
   const { login, register } = useAuth();
 
-  // Memoize validation status to prevent unnecessary re-renders
   const isFormValid = useMemo(() => {
-    if (!isRegisterMode) return true; // Login form is always "valid" from a UI perspective
+    if (!isRegisterMode) return true;
     const allReqsMet = Object.values(passwordValidation).every(Boolean);
     return allReqsMet && password === confirmPassword && password !== '';
   }, [password, confirmPassword, passwordValidation, isRegisterMode]);
 
-  // Effect to validate password in real-time
   useEffect(() => {
     setPasswordValidation({
       length: password.length >= 8,
@@ -85,10 +84,22 @@ const LoginPage = () => {
         await login(username, password);
       }
     } catch (err) {
-      if (err.response) {
-        // This will now correctly display "Username already registered" etc.
-        setError(err.response.data.detail || 'An unknown error occurred.');
+      // --- THIS IS THE UPDATED ERROR HANDLING LOGIC ---
+      if (err.response && err.response.data && err.response.data.detail) {
+        const errorDetail = err.response.data.detail;
+        
+        if (Array.isArray(errorDetail)) {
+          // This handles Pydantic validation errors (like an invalid email).
+          // We take the message from the first error in the array.
+          // Example: "value is not a valid email address"
+          setError(errorDetail[0].msg);
+        } else {
+          // This handles our custom string errors from the backend.
+          // Example: "Username already registered"
+          setError(errorDetail);
+        }
       } else {
+        // Fallback for network errors or other unexpected issues.
         setError('An unexpected network error occurred.');
       }
     } finally {
