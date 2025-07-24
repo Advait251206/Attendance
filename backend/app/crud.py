@@ -12,37 +12,37 @@ def get_user_by_email(db: Session, email: str):
     return db.query(models.User).filter(models.User.email == email).first()
 
 def create_user(db: Session, user: schemas.UserCreate):
-    """
-    Creates a new user in the database with a plaintext password.
-    WARNING: This is for testing only and is not secure.
-    """
     db_user = models.User(
         username=user.username,
         email=user.email,
-        password=user.password  # Storing the original plaintext password
+        password=user.password
     )
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
     return db_user
 
-def authenticate_user(db: Session, username_or_email: str, password: str) -> models.User | None:
+def authenticate_user(db: Session, username_or_email: str, password: str):
     """
-    Authenticates a user by comparing the provided plaintext password
-    with the one stored in the database.
+    Authenticates a user and returns a specific reason for failure.
+    Returns: A tuple of (user_object, error_message_string).
+             On success, error_message_string will be None.
+             On failure, user_object will be None.
     """
     user = db.query(models.User).filter(
         or_(models.User.username == username_or_email, models.User.email == username_or_email)
     ).first()
 
+    # Case 1: The user does not exist in the database.
     if not user:
-        return None
+        return None, "Username or email does not exist"
     
-    # Direct string comparison for plaintext passwords
+    # Case 2: The user exists, but the password is incorrect.
     if user.password != password:
-        return None
+        return None, "Password is incorrect"
         
-    return user
+    # Case 3: Success. User exists and password is correct.
+    return user, None
 
 # --- Subject CRUD ---
 def get_subject(db: Session, subject_id: int, user_id: int):
