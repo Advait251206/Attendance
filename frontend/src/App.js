@@ -20,8 +20,8 @@ const AppRoutes = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        {/* The invalid comment has been removed from the line below. */}
-        <p className="animate-pulse text-2xl text-hacker-green">// Initializing Secure Connection...</p>
+        {/* THE PREVIOUS ERROR WAS HERE. THE TEXT NOW CORRECTLY DISPLAYS WITHOUT THE INVALID '//' COMMENT. */}
+        <p className="animate-pulse text-2xl text-hacker-green">Initializing Secure Connection...</p>
       </div>
     );
   }
