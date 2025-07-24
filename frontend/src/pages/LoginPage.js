@@ -1,25 +1,41 @@
 // frontend/src/pages/LoginPage.js
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { motion } from 'framer-motion';
+import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/solid';
 
-const PasswordRequirements = () => (
-    <motion.div 
-        className="text-xs text-terminal-gray/70 space-y-1 mt-2 p-2 border border-hacker-green/20 rounded-md"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-    >
-        <p>Password requires:</p>
-        <ul className="list-disc list-inside pl-2">
-            <li>At least 8 characters</li>
-            <li>One uppercase letter (A-Z)</li>
-            <li>One lowercase letter (a-z)</li>
-            <li>One number (0-9)</li>
-            <li>One special character (@$!%*?&#)</li>
-        </ul>
-    </motion.div>
-);
+// A dynamic component to show password requirements and their status
+const PasswordRequirements = ({ validation }) => {
+    const requirements = [
+        { key: 'length', text: 'At least 8 characters' },
+        { key: 'uppercase', text: 'One uppercase letter (A-Z)' },
+        { key: 'lowercase', text: 'One lowercase letter (a-z)' },
+        { key: 'number', text: 'One number (0-9)' },
+        { key: 'special', text: 'One special character (@$!%*?&#)' },
+    ];
+
+    return (
+        <motion.div 
+            className="text-xs text-terminal-gray/70 space-y-1 mt-2 p-3 border border-hacker-green/20 rounded-md"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+        >
+            {requirements.map(req => (
+                <div key={req.key} className="flex items-center">
+                    {validation[req.key] ? (
+                        <CheckCircleIcon className="h-4 w-4 text-hacker-green mr-2" />
+                    ) : (
+                        <XCircleIcon className="h-4 w-4 text-red-500/50 mr-2" />
+                    )}
+                    <span className={validation[req.key] ? 'line-through text-terminal-gray/50' : ''}>
+                        {req.text}
+                    </span>
+                </div>
+            ))}
+        </motion.div>
+    );
+};
 
 const LoginPage = () => {
   const [isRegisterMode, setIsRegisterMode] = useState(false);
@@ -28,42 +44,61 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
-  
-  // State to manage the loading indicator on the button
   const [isProcessing, setIsProcessing] = useState(false);
-  
+
+  // State for real-time password validation
+  const [passwordValidation, setPasswordValidation] = useState({
+    length: false,
+    uppercase: false,
+    lowercase: false,
+    number: false,
+    special: false,
+  });
+
   const { login, register } = useAuth();
+
+  // Memoize validation status to prevent unnecessary re-renders
+  const isFormValid = useMemo(() => {
+    if (!isRegisterMode) return true; // Login form is always "valid" from a UI perspective
+    const allReqsMet = Object.values(passwordValidation).every(Boolean);
+    return allReqsMet && password === confirmPassword && password !== '';
+  }, [password, confirmPassword, passwordValidation, isRegisterMode]);
+
+  // Effect to validate password in real-time
+  useEffect(() => {
+    setPasswordValidation({
+      length: password.length >= 8,
+      uppercase: /[A-Z]/.test(password),
+      lowercase: /[a-z]/.test(password),
+      number: /[0-9]/.test(password),
+      special: /[@$!%*?&#]/.test(password),
+    });
+  }, [password]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    setIsProcessing(true); // Set loading to true when the form is submitted
+    setIsProcessing(true);
 
     try {
       if (isRegisterMode) {
-        if (password !== confirmPassword) {
-          setError('Passwords do not match.');
-          // We return here but keep isProcessing true so the user can see the error
-          // and it will be reset on the next action.
-          setIsProcessing(false);
-          return;
-        }
         await register(username, email, password); 
       } else {
         await login(username, password);
       }
     } catch (err) {
-      if (err.response && err.response.data && Array.isArray(err.response.data.detail)) {
-        const firstError = err.response.data.detail[0];
-        const field = firstError.loc[1];
-        const message = firstError.msg;
-        setError(`Validation Error -> ${field}: ${message}`);
+      if (err.response) {
+        // Handle specific validation errors from the backend (like duplicate user)
+        if (err.response.status === 400 || err.response.status === 422) {
+          setError(err.response.data.detail || 'Validation failed.');
+        } else {
+          setError(err.response.data.detail || (isRegisterMode ? 'Registration failed.' : 'Login failed.'));
+        }
       } else {
-        setError(err.response?.data?.detail || (isRegisterMode ? 'Registration failed.' : 'Login failed.'));
+        setError('An unexpected network error occurred.');
       }
     } finally {
-      // Set loading back to false after the API call finishes (either success or fail)
-      setIsProcessing(false); 
+      setIsProcessing(false);
     }
   };
 
@@ -127,7 +162,7 @@ const LoginPage = () => {
                   className="input-field"
                   required
               />
-              {isRegisterMode && <PasswordRequirements />}
+              {isRegisterMode && <PasswordRequirements validation={passwordValidation} />}
           </div>
           
           {isRegisterMode && (
@@ -140,11 +175,17 @@ const LoginPage = () => {
                 className="input-field"
                 required
               />
+              {password && confirmPassword && password !== confirmPassword && (
+                <p className="text-red-500 text-xs mt-1">Passwords do not match.</p>
+              )}
             </motion.div>
           )}
 
-          {/* This button is now disabled and shows a loading message while processing */}
-          <button type="submit" className="w-full btn-primary" disabled={isProcessing}>
+          <button 
+            type="submit" 
+            className="w-full btn-primary" 
+            disabled={isProcessing || (isRegisterMode && !isFormValid)}
+          >
             {isProcessing
               ? (isRegisterMode ? 'CREATING_ACCOUNT...' : 'INITIATING_SESSION...')
               : (isRegisterMode ? '[CREATE_ACCOUNT]' : '[INITIATE_SESSION]')}
