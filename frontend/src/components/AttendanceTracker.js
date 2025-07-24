@@ -18,16 +18,16 @@ const AttendanceTracker = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
-    // The syntax error here has been fixed (removed the extra '.')
     const fetchData = useCallback(async () => {
         setLoading(true);
         setError('');
         const formattedDate = formatDateForAPI(currentDate);
 
         try {
+            // FIXED: Removed the redundant '/api' prefix from the URLs
             const [subjectsResponse, attendanceResponse] = await Promise.all([
-                secureApiClient.get('/api/subjects/'),
-                secureApiClient.get(`/api/attendance/${formattedDate}`)
+                secureApiClient.get('/subjects/'),
+                secureApiClient.get(`/attendance/${formattedDate}`)
             ]);
             setSubjects(subjectsResponse.data);
             setAttendanceRecords(attendanceResponse.data);
@@ -53,10 +53,11 @@ const AttendanceTracker = () => {
         const existingRecord = attendanceRecords.find(r => r.subject.id === subject.id);
         const formattedDate = formatDateForAPI(currentDate);
         try {
+            // FIXED: Removed the redundant '/api' prefix from the URLs
             if (existingRecord) {
-                await secureApiClient.put(`/api/attendance/${existingRecord.id}`, { status, subject_id: subject.id, date: formattedDate });
+                await secureApiClient.put(`/attendance/${existingRecord.id}`, { status, subject_id: subject.id, date: formattedDate });
             } else {
-                await secureApiClient.post('/api/attendance/', { date: formattedDate, status, subject_id: subject.id });
+                await secureApiClient.post('/attendance/', { date: formattedDate, status, subject_id: subject.id });
             }
             fetchData();
         } catch (err) {
@@ -87,7 +88,7 @@ const AttendanceTracker = () => {
             <div className="flex flex-col md:flex-row justify-between items-center mb-6">
                 <h2 className="text-2xl mb-4 md:mb-0 flex items-center">
                     <CalendarDaysIcon className="h-6 w-6 mr-2" />
-                    {'Daily Log'}
+                    {'// Daily Log'}
                 </h2>
                 <input
                     type="date"

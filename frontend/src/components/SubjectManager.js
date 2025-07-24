@@ -1,7 +1,9 @@
+// frontend/src/components/SubjectManager.js
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpenIcon, PlusIcon } from '@heroicons/react/24/solid';
-import { secureApiClient } from '../api/axios'; // Use the secure client
+import { secureApiClient } from '../api/axios';
 
 const SubjectManager = () => {
   const [subjects, setSubjects] = useState([]);
@@ -10,11 +12,11 @@ const SubjectManager = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
 
-  // Fetch subjects when the component loads
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
-        const response = await secureApiClient.get('/api/subjects/');
+        // FIXED: Removed the redundant '/api' prefix
+        const response = await secureApiClient.get('/subjects/');
         setSubjects(response.data);
       } catch (err) {
         setError('Failed to load subjects.');
@@ -25,7 +27,6 @@ const SubjectManager = () => {
     fetchSubjects();
   }, []);
 
-  // Handle adding a new subject
   const handleAddSubject = async (e) => {
     e.preventDefault();
     if (!newSubjectName) {
@@ -33,11 +34,12 @@ const SubjectManager = () => {
         return;
     }
     try {
-      const response = await secureApiClient.post('/api/subjects/', {
+      // FIXED: Removed the redundant '/api' prefix
+      const response = await secureApiClient.post('/subjects/', {
         name: newSubjectName,
         professor: newProfessor,
       });
-      setSubjects([...subjects, response.data]); // Add new subject to the list
+      setSubjects([...subjects, response.data]);
       setNewSubjectName('');
       setNewProfessor('');
       setError('');
@@ -57,7 +59,6 @@ const SubjectManager = () => {
         {'// My Subjects'}
       </h2>
 
-      {/* Form to add a new subject */}
       <form onSubmit={handleAddSubject} className="flex flex-col md:flex-row gap-4 mb-6">
         <input
           type="text"
@@ -80,7 +81,6 @@ const SubjectManager = () => {
       </form>
       {error && <p className="text-red-500 mb-4">{`Error: ${error}`}</p>}
 
-      {/* List of existing subjects */}
       <div className="space-y-3">
         <AnimatePresence>
           {subjects.length > 0 ? (
