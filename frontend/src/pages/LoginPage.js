@@ -84,23 +84,23 @@ const LoginPage = () => {
         await login(username, password);
       }
     } catch (err) {
-      // --- THIS IS THE UPDATED ERROR HANDLING LOGIC ---
+      // --- UPDATED ERROR HANDLING LOGIC ---
       if (err.response && err.response.data && err.response.data.detail) {
         const errorDetail = err.response.data.detail;
         
         if (Array.isArray(errorDetail)) {
-          // This handles Pydantic validation errors (like an invalid email).
-          // We take the message from the first error in the array.
-          // Example: "value is not a valid email address"
-          setError(errorDetail[0].msg);
+          // Handles detailed validation errors from Pydantic (e.g., invalid email)
+          const firstError = errorDetail[0];
+          const field = firstError.loc[1]; // e.g., 'email' or 'password'
+          setError(`${field}: ${firstError.msg}`);
         } else {
-          // This handles our custom string errors from the backend.
-          // Example: "Username already registered"
+          // Handles specific string errors from our backend
+          // (e.g., "Incorrect username, email, or password", "Username already registered")
           setError(errorDetail);
         }
       } else {
-        // Fallback for network errors or other unexpected issues.
-        setError('An unexpected network error occurred.');
+        // Fallback for network errors or other unexpected issues
+        setError('An unexpected network error occurred. Please try again.');
       }
     } finally {
       setIsProcessing(false);
