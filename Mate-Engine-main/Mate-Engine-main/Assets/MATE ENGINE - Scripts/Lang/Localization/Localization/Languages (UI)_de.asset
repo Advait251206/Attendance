@@ -1,0 +1,1423 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Languages (UI)_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 698e167bd107c3a40a5376082f2e2f35, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 96968105984
+    m_Localized: MATE ENGINE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11105833312256
+    m_Localized: 'Animationswechselzeit
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11236599128064
+    m_Localized: "Animations\xFCbergangszeit\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11239019241472
+    m_Localized: "Tanz-Lautst\xE4rkeschwelle\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11241108004864
+    m_Localized: 'Avatar immer im Vordergrund
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11243918188544
+    m_Localized: 'Avatar kann tanzen
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11244643803136
+    m_Localized: 'Kopf folgt der Maus
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11245205839872
+    m_Localized: "Avatargr\xF6\xDFe\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11245612687360
+    m_Localized: Speichern
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11320741060608
+    m_Localized: "Zur\xFCcksetzen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11321303097344
+    m_Localized: 'Polygone
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11321839968256
+    m_Localized: 'Knochen
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11796140253184
+    m_Localized: 'FPS-Limit
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23418267230208
+    m_Localized: 'Einstellungen
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23684911718400
+    m_Localized: "Avatar Lautst\xE4rke"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24123241652224
+    m_Localized: "Effekt Lautst\xE4rke"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24123816271872
+    m_Localized: "Men\xFC Lautst.\xE4rke"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24124437028864
+    m_Localized: 'Grafik
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24125049397248
+    m_Localized: 'Ultra
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24125577879552
+    m_Localized: 'Sehr Hoch
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24126186053632
+    m_Localized: 'Hoch
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24126735507456
+    m_Localized: 'Normal
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24509532856320
+    m_Localized: 'Niedrig
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24510153613312
+    m_Localized: 'Steam-DLCs
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24510665318400
+    m_Localized: 'Blumen-Heiligenschein
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27326909767680
+    m_Localized: "Hinzuf\xFCgen\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27328117727232
+    m_Localized: 'Entfernen
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37370367827968
+    m_Localized: 'Sprache
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1494291876667392
+    m_Localized: 'Mod laden
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1494319580045312
+    m_Localized: 'Experimentell
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1494394716807168
+    m_Localized: Auf Fenster und Taskleiste sitzen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1494416451690496
+    m_Localized: "Diese Funktion k\xF6nnte in Spielen mit Anti-Cheat zu einem Bann
+      f\xFChren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1971210921435136
+    m_Localized: 'Discord Rich Presence
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1971386927013888
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1971391947595776
+    m_Localized: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1971392559964160
+    m_Localized: "\u65E5\u672C\u8A9E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1971393197498368
+    m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1971466828505088
+    m_Localized: "\u4E2D\u6587"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1982288996851712
+    m_Localized: "\uD55C\uAD6D\uC5B4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2011903232565248
+    m_Localized: "Willkommen bei \u30E1\u30A4\u30C8\u30A8\u30F3\u30B8\u30F3 (MateEngine)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2012023386791936
+    m_Localized: "Diese App befindet sich noch in der Entwicklung, und mit der Zeit
+      werden neue Funktionen hinzukommen. Die App wurde von der Anime-Community f\xFCr
+      die Anime-Community entwickelt. Es kann einige kleinere Probleme geben \u2013
+      wenn du welche findest, kannst du sie \xFCber das Optionen-Men\xFC melden,
+      indem du mit der rechten Maustaste auf deinen Mate klickst und das Fehler-Symbol
+      ausw\xE4hlst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2012176361447424
+    m_Localized: So benutzt du MateEngine (Speedrun)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2012219415977984
+    m_Localized: "MateEngine ist super einfach zu bedienen! Klicke einfach mit der
+      rechten Maustaste, um das Optionsmen\xFC zu \xF6ffnen. Dort kannst du die Avatargr\xF6\xDFe
+      \xE4ndern, Effekte aktivieren oder deaktivieren, Apps auf die Whitelist setzen,
+      die deinen Avatar tanzen lassen d\xFCrfen, oder Mods und eigene VRM-/ME-Modelldateien
+      laden. Im n\xE4chsten Schritt zeige ich dir, wie du eigene Avatare l\xE4dst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2012314333077504
+    m_Localized: Eigene Modelle verwenden 1/2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2012317843709952
+    m_Localized: "Um ein eigenes Modell zu verwenden, brauchst du eine .VRM-Datei.
+      Du kannst benutzerdefinierte VRM-Modelle auf Webseiten wie Booth.jp und VRoidHub
+      herunterladen. Sobald du eine .VRM-Datei hast, \xF6ffne das Optionsmen\xFC
+      und klicke unten auf den \u201EVRM\u201C-Button. Dadurch \xF6ffnet sich der
+      Datei-Explorer, in dem du deine Datei ausw\xE4hlen kannst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2012431912001536
+    m_Localized: Eigene Modelle verwenden 2/2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2012464099090432
+    m_Localized: "Manchmal kann es passieren, dass eine .VRM-Datei nicht geladen
+      wird. Das liegt meist nicht an MateEngine, sondern an falschen Shadern oder
+      einer fehlerhaften Armatur beim Export. In solchen F\xE4llen solltest du die
+      offizielle UniVRM-Dokumentation pr\xFCfen. Manche Programme versuchen, defekte
+      Modelle zu reparieren \u2013 MateEngine tut das nicht (und wird es auch nicht).
+      Du bist selbst daf\xFCr verantwortlich, dass deine VRM korrekt exportiert ist."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2024289331044352
+    m_Localized: "Language - \u8A00\u8A9E (Gengo) - \u042F\u0437\u044B\u043A (Yazyk)
+      - Idioma - \u8A9E\u8A00 (Y\u01D4y\xE1n) - Sprache - Langue - \uC5B8\uC5B4 (Eoneo)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2024320264036352
+    m_Localized: "\xDCberspringen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2024395421769728
+    m_Localized: Fertig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2024529517862912
+    m_Localized: "Zur\xFCck"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2024532080582656
+    m_Localized: Weiter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7781828886781952
+    m_Localized: "Kopf Bewegungsintensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7781852853035008
+    m_Localized: "Wirbels\xE4ulen Bewegungsintensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7781877666537472
+    m_Localized: Handverfolgung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7781899598553088
+    m_Localized: "Men\xFCfarbe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7781916468043776
+    m_Localized: "Men\xFCs\xE4ttigung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7781941810028544
+    m_Localized: Modelle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7781977230925824
+    m_Localized: Laden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9724442586374144
+    m_Localized: Bild korrigieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9725012508401664
+    m_Localized: UPLOAD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9722136935522304
+    m_Localized: PNG-Datei muss unter 700 KB sein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9844627515367424
+    m_Localized: "Augen Bewegungsintensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11144201018269696
+    m_Localized: "Inversive Kinematik F\xFC\xDFe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11144228465795072
+    m_Localized: "Die meisten Modelle sehen mit aktivierten IK-F\xFC\xDFen besser
+      aus. Wenn nicht, deaktiviere sie f\xFCr einen femininen Bewegungsstil."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11147404514418688
+    m_Localized: Umgebungsverdeckung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13999268343832576
+    m_Localized: Bildschirmschoner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13999269778284544
+    m_Localized: "Nach einiger Zeit erscheint das Desktop-Maskottchen gro\xDF auf
+      dem Bildschirm und spielt eine Idle-Animation ab, bis du zur\xFCckkehrst und
+      klickst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14037793143513088
+    m_Localized: Bildschirmschoner-Timer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14037795504906240
+    m_Localized: Debugging
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14037796842889216
+    m_Localized: GC erzwingen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14037800621957120
+    m_Localized: "F\xFChrt eine erzwungene Speicherbereinigung (Garbage Collection)
+      durch. Dies ist eine Debug-Funktion \u2013 benutze sie nur, wenn du genau wei\xDFt,
+      was du tust."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21396842692468736
+    m_Localized: Alarm aktivieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21396846479925248
+    m_Localized: 'Experimentell: Die Alarmfunktion ist ein neues Test-Feature!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21397663471624192
+    m_Localized: Ambientlicht
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21397935245746176
+    m_Localized: "AMBI 1 Intensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21397936617283584
+    m_Localized: "AMBI 1 S\xE4ttigung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21397937200291840
+    m_Localized: AMBI 1 Farbe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21397937758134272
+    m_Localized: "AMBI 2 Intensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21397938295005184
+    m_Localized: "AMBI 2 S\xE4ttigung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21397938898984960
+    m_Localized: AMBI 2 Farbe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21397939494576128
+    m_Localized: "AMBI 3 Intensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21398132755521536
+    m_Localized: "AMBI 3 S\xE4ttigung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21398134148030464
+    m_Localized: AMBI 3 Farbe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21399717254520832
+    m_Localized: Ambient aktivieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21399718462480384
+    m_Localized: Lichter aktivieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21400106955694080
+    m_Localized: Globallicht
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21400294541746176
+    m_Localized: "Lichtintensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21400296517263360
+    m_Localized: "Lichts\xE4ttigung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21400297775554560
+    m_Localized: Lichtfarbe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63722729174507520
+    m_Localized: Update
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64079105226743808
+    m_Localized: Kyaa~ setz mich ab..!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64086005318197248
+    m_Localized: Heb mich nicht so, das ist ja peinlich~
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64086006849118208
+    m_Localized: Bitte, ganz sachte wieder auf den boden >.<
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64086008195489792
+    m_Localized: Kyaa! Das ist zu hoch! Hey lass mich runter!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64086009676079104
+    m_Localized: ahhhhhhh..!!! >_<
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64086226806808576
+    m_Localized: Das ist keine Prinzessin Kutsche~! Lass mich runter~!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64086278308667392
+    m_Localized: Lass mich runter! >_<!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64086678092947456
+    m_Localized: Hehe schau mal wie ich mich drehe ^^
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64086768543113216
+    m_Localized: Eee~ schau wie ich tanze, master >.o ~!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64087092846698496
+    m_Localized: "Kyaa, ich kann nicht aufh\xF6ren mich zu bewegen~ so spa\xDFig!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64087094838992896
+    m_Localized: "Ufufu~ Ich bin jetzt dein Idol auf der B\xFChne\u266A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64087097229746176
+    m_Localized: Dance battle?! Das velier ich nicht~!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64087099624693760
+    m_Localized: Tanz Tanz Tanz Tanz! >_<
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64087382320783360
+    m_Localized: Entspannungs Zeit~ endlich eine Pause!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64087412918231040
+    m_Localized: Ich setz mich einfach mal hier hin und sieh dir beim Arbeiten zu~
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64087414772113408
+    m_Localized: "Bequemes pl\xE4tzchen. Beachte mich garnicht~"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64087416336588800
+    m_Localized: "Ich werde dich anfeuern solange du besch\xE4ftigt bist, Meister~!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64087417628434432
+    m_Localized: "Nyaa~ Ich bleib hier Mucksm\xE4uschenstill, versprochen~"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64087418794450944
+    m_Localized: Hart am arbeiten? Ich werde dir gesellschaft leisten~
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64088019687219200
+    m_Localized: "Shhh... st\xF6r mich nicht, ich lade s\xFC\xDFheit auf~"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64088020911955968
+    m_Localized: Jedes Haustier verdient ein macaron schlafplatz, nicht wahr?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64088021570461696
+    m_Localized: Ehehe~ mein kissen riecht nacht Zucker.... so traumhaft~
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64088022228967424
+    m_Localized: So sanft... ich schmelze hinein~
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64088022841335808
+    m_Localized: "S\xFC\xDFe Tr\xE4ume auf einem s\xFC\xDFen kissen, ehehe~"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64088023474675712
+    m_Localized: "Mmm... dieses macaron ist so fluffig~ ich k\xF6nnte f\xFCr immer
+      schlafen..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64485837908254720
+    m_Localized: Sakura Heiligenschein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64485839854411776
+    m_Localized: Retro Heiligenschein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64485841104314368
+    m_Localized: Event basierte Nachrichten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64486049066295296
+    m_Localized: "Aktiviere Tanz\xFCbergang"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64486115202080768
+    m_Localized: Tanzwechselzeit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64486115827032064
+    m_Localized: "Tanz \xDCbergangszeit"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64486267505647616
+    m_Localized: Starte mit dem System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64486353119780864
+    m_Localized: KI Chat Befehle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64486586960617472
+    m_Localized: "L\xF6sche Chatverlauf"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70973443252723712
+    m_Localized: Steam DLCs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70973429180833792
+    m_Localized: Allgemein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70973430707560448
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70973432238481408
+    m_Localized: Bewegung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70973433303834624
+    m_Localized: Aussehen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70973434356604928
+    m_Localized: Tanzen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70973435300323328
+    m_Localized: Fensterfunktion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70973436151767040
+    m_Localized: Design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70973438601240576
+    m_Localized: Alarm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70973439893086208
+    m_Localized: KI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70973441449172992
+    m_Localized: Debug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70999952109641728
+    m_Localized: "MateEngine wird gerade als Aktivit\xE4t in Discord angezeigt. Es
+      wird angezeigt was dein Haustier gerade macht, wie Musik abspielen, unt\xE4tig
+      sein, sitzen und weiteres."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71002484403904512
+    m_Localized: "Die Verz\xF6gerung bevor die n\xE4chte Idle-Animation beginnt.
+      Es ist empfehlenswert, diesen Wert bei 50% zu lassen, um fl\xFCssige und nat\xFCrliche
+      \xDCberg\xE4nge gew\xE4hrzuleisten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71003365492957184
+    m_Localized: "Legt fest wie lange der \xDCbergang zwischen Animation A und B
+      braucht. Ein niedriger Wert sorgt f\xFCr fl\xFCssige \xDCberg\xE4nge zwischen
+      den Idle\u2014Animationen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71004038695526400
+    m_Localized: "Das K\xF6rper-Tracking erm\xF6glicht dein Avatar die Mausbewegungen
+      mit seines Kopfes, Hals und Augen zu verfolgen. Mit dem Regler unten kannst
+      du einstellen, wie viel sich jedes Teil bewegt. Den Regler komplett nach links
+      zu schieben deaktiviert das K\xF6rper-Tracking, und nach rechts erh\xF6ht die
+      Reaktionsst\xE4rke der Teile. F\xFCr fl\xFCssige Bewegungen sollte der Regler
+      m\xF6glichst mittig sein."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71004940831596544
+    m_Localized: "Handverfolgung erm\xF6glicht es dir, die H\xE4nde des Avatars mit
+      deiner Maus zu bewegen. Die H\xE4nde des Avatars verfolgen der Maus, als w\xFCrde
+      es versuchen, es zu fangen oder festzuhalten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71005229898833920
+    m_Localized: "Der Husbando-Modus l\xE4sst deinen Avatar m\xE4nnlicher wirken.
+      Er ver\xE4ndert die Stand- und Tanzanimationen, um besser zu diesem Stil zu
+      passen. Diese Funktion ist experimentell und wirkt sich nicht auf Sitzanimationen
+      aus. Au\xDFerdem werden Headpats deaktiviert."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71009590645399552
+    m_Localized: "Wenn diese Funktion aktiviert ist, kann der Avatar zur Musik tanzen.
+      Um es einzurichten, klicke auf das EInstellungs-Symbol neben dieser Funktion
+      und f\xFCge die Apps hinzu, die die T\xE4nze des Avatars steuern k\xF6nnen.
+      Einige Apps erfordern, dass Musik bereits l\xE4uft. Wenn die Musik l\xE4uft
+      klicke auf das Aktualisieren-Symbol, damit MateEngine die App erkennen kann. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71010482257960960
+    m_Localized: "Wenn Tanz\xFCberg\xE4nge aktiv sind, kann der Avatar im Laufe der
+      Zeit zwischen verschiedenen Tanzstilen wechseln. Verwende den Schieberegler
+      unten, um zu steuern, wie schnell es wechseln soll. Niedrigere Werte lassen
+      den Avatar schneller wechseln, w\xE4hrend h\xF6here Werte daf\xFCr sorgen,
+      dass der Wechsel langsamer abl\xE4uft."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71011000183201792
+    m_Localized: "Die Tanz Threshold legt fest, wann der Avatar je nach Lautst\xE4rke
+      anfangen soll zu tanzen. Wenn sie zu niedrig eingestellt is f\xE4ngt der Avatar
+      sofort an zu tanzen, wenn Musik abgespielt wird. Wenn sie auf das Maximum eingestellt
+      ist, tanzt der Avatar nur bei lauter Musik. Empfohlen ist den Wert aud dem
+      Standardwert oder niedriger zu belassen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682236403712
+    m_Localized: 'Mod laden
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682257375232
+    m_Localized: 'Experimentell
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682257375233
+    m_Localized: Auf Fenster und Taskleiste sitzen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569536
+    m_Localized: "Diese Funktion k\xF6nnte in Spielen mit Anti-Cheat zu einem Bann
+      f\xFChren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569537
+    m_Localized: 'Discord Rich Presence
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569538
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569539
+    m_Localized: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569540
+    m_Localized: "\u65E5\u672C\u8A9E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569541
+    m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569542
+    m_Localized: "\u4E2D\u6587"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569543
+    m_Localized: "\uD55C\uAD6D\uC5B4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569544
+    m_Localized: "Willkommen bei \u30E1\u30A4\u30C8\u30A8\u30F3\u30B8\u30F3 (MateEngine)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569545
+    m_Localized: "Diese App befindet sich noch in der Entwicklung, und mit der Zeit
+      werden neue Funktionen hinzukommen. Die App wurde von der Anime-Community f\xFCr
+      die Anime-Community entwickelt. Es kann einige kleinere Probleme geben \u2013
+      wenn du welche findest, kannst du sie \xFCber das Optionen-Men\xFC melden,
+      indem du mit der rechten Maustaste auf deinen Mate klickst und das Fehler-Symbol
+      ausw\xE4hlst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569546
+    m_Localized: So benutzt du MateEngine (Speedrun)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569547
+    m_Localized: "MateEngine ist super einfach zu bedienen! Klicke einfach mit der
+      rechten Maustaste, um das Optionsmen\xFC zu \xF6ffnen. Dort kannst du die Avatargr\xF6\xDFe
+      \xE4ndern, Effekte aktivieren oder deaktivieren, Apps auf die Whitelist setzen,
+      die deinen Avatar tanzen lassen d\xFCrfen, oder Mods und eigene VRM-/ME-Modelldateien
+      laden. Im n\xE4chsten Schritt zeige ich dir, wie du eigene Avatare l\xE4dst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569548
+    m_Localized: Eigene Modelle verwenden 1/2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569549
+    m_Localized: "Um ein eigenes Modell zu verwenden, brauchst du eine .VRM-Datei.
+      Du kannst benutzerdefinierte VRM-Modelle auf Webseiten wie Booth.jp und VRoidHub
+      herunterladen. Sobald du eine .VRM-Datei hast, \xF6ffne das Optionsmen\xFC
+      und klicke unten auf den \u201EVRM\u201C-Button. Dadurch \xF6ffnet sich der
+      Datei-Explorer, in dem du deine Datei ausw\xE4hlen kannst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569550
+    m_Localized: Eigene Modelle verwenden 2/2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569551
+    m_Localized: "Manchmal kann es passieren, dass eine .VRM-Datei nicht geladen
+      wird. Das liegt meist nicht an MateEngine, sondern an falschen Shadern oder
+      einer fehlerhaften Armatur beim Export. In solchen F\xE4llen solltest du die
+      offizielle UniVRM-Dokumentation pr\xFCfen. Manche Programme versuchen, defekte
+      Modelle zu reparieren \u2013 MateEngine tut das nicht (und wird es auch nicht).
+      Du bist selbst daf\xFCr verantwortlich, dass deine VRM korrekt exportiert ist."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569552
+    m_Localized: "Language - \u8A00\u8A9E (Gengo) - \u042F\u0437\u044B\u043A (Yazyk)
+      - Idioma - \u8A9E\u8A00 (Y\u01D4y\xE1n) - Sprache - Langue - \uC5B8\uC5B4 (Eoneo)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569553
+    m_Localized: "\xDCberspringen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569554
+    m_Localized: Fertig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569555
+    m_Localized: "Zur\xFCck"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569556
+    m_Localized: Weiter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569557
+    m_Localized: "Kopf Bewegungsintensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569558
+    m_Localized: "Wirbels\xE4ulen Bewegungsintensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569559
+    m_Localized: Handverfolgung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569560
+    m_Localized: "Men\xFCfarbe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569561
+    m_Localized: "Men\xFCs\xE4ttigung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569562
+    m_Localized: Modelle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569563
+    m_Localized: Laden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569564
+    m_Localized: PNG-Datei muss unter 700 KB sein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569565
+    m_Localized: Bild korrigieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569566
+    m_Localized: UPLOAD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569567
+    m_Localized: "Augen Bewegungsintensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569568
+    m_Localized: "Inversive Kinematik F\xFC\xDFe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569569
+    m_Localized: "Die meisten Modelle sehen mit aktivierten IK-F\xFC\xDFen besser
+      aus. Wenn nicht, deaktiviere sie f\xFCr einen femininen Bewegungsstil."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569570
+    m_Localized: Umgebungsverdeckung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569571
+    m_Localized: Bildschirmschoner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569572
+    m_Localized: "Nach einiger Zeit erscheint das Desktop-Maskottchen gro\xDF auf
+      dem Bildschirm und spielt eine Idle-Animation ab, bis du zur\xFCckkehrst und
+      klickst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569573
+    m_Localized: Bildschirmschoner-Timer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569574
+    m_Localized: Debugging
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569575
+    m_Localized: GC erzwingen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569576
+    m_Localized: "F\xFChrt eine erzwungene Speicherbereinigung (Garbage Collection)
+      durch. Dies ist eine Debug-Funktion \u2013 benutze sie nur, wenn du genau wei\xDFt,
+      was du tust."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569577
+    m_Localized: Alarm aktivieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682261569578
+    m_Localized: 'Experimentell: Die Alarmfunktion ist ein neues Test-Feature!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682265763840
+    m_Localized: Ambientlicht
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682265763841
+    m_Localized: "AMBI 1 Intensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682265763842
+    m_Localized: "AMBI 1 S\xE4ttigung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682265763843
+    m_Localized: AMBI 1 Farbe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682265763844
+    m_Localized: "AMBI 2 Intensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682265763845
+    m_Localized: "AMBI 2 S\xE4ttigung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682265763846
+    m_Localized: AMBI 2 Farbe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682265763847
+    m_Localized: "AMBI 3 Intensit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682265763848
+    m_Localized: "AMBI 3 S\xE4ttigung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682265763849
+    m_Localized: AMBI 3 Farbe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71028682265763850
+    m_Localized: Ambient aktivieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71470101493227520
+    m_Localized: "Freitag \u2013 Durch Dr\xFCcken dieses Knopfs wird der Alarm jeden
+      Freitag aktiviert; zus\xE4tzliche Tage k\xF6nnen ausgew\xE4hlt werden oder
+      es bleibt nur bei Freitag."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71470100155244544
+    m_Localized: "Donnerstag \u2013 Durch Dr\xFCcken dieses Knopfs wird der Alarm
+      jeden Donnerstag aktiviert; zus\xE4tzliche Tage k\xF6nnen ausgew\xE4hlt werden
+      oder es bleibt nur bei Donnerstag."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71470098959867904
+    m_Localized: "Mittwoch \u2013 Durch Dr\xFCcken dieses Knopfs wird der Alarm jeden
+      Mittwoch aktiviert; zus\xE4tzliche Tage k\xF6nnen ausgew\xE4hlt werden oder
+      es bleibt nur bei Mittwoch."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71470097592524800
+    m_Localized: "Dienstag \u2013 Durch Dr\xFCcken dieses Knopfs wird der Alarm jeden
+      Dienstag aktiviert; zus\xE4tzliche Tage k\xF6nnen ausgew\xE4hlt werden oder
+      es bleibt nur bei Dienstag."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71470095960940544
+    m_Localized: "Montag \u2013 Wenn du diesen Knopf dr\xFCckst, wird der Alarm jeden
+      Montag aktiviert. Du kannst zus\xE4tzliche Tage ausw\xE4hlen oder es auf nur
+      Montag belassen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71470109877641216
+    m_Localized: "Sonntag \u2013 Durch Dr\xFCcken dieses Knopfs wird der Alarm jeden
+      Sonntag aktiviert; zus\xE4tzliche Tage k\xF6nnen ausgew\xE4hlt werden oder
+      es bleibt nur bei Sonntag."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71470107461722112
+    m_Localized: "Samstag \u2013 Durch Dr\xFCcken dieses Knopfs wird der Alarm jeden
+      Samstag aktiviert; zus\xE4tzliche Tage k\xF6nnen ausgew\xE4hlt werden oder
+      es bleibt nur bei Samstag."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71470682064592896
+    m_Localized: "Dies ist die Alarmfunktion. Links kannst du die Stunde einstellen
+      (angezeigt im 12-Stunden- und 24-Stunden-Format). Rechts kannst du die Minuten
+      einstellen. Au\xDFerdem kannst du die Wochentage ausw\xE4hlen, an denen der
+      Alarm klingeln soll. Werden keine Tage ausgew\xE4hlt, klingelt der Alarm t\xE4glich
+      zur eingestellten Zeit. Um den Alarm nur an bestimmten Tagen klingeln zu lassen,
+      w\xE4hle die gew\xFCnschten Tage aus."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751708213026816
+    m_Localized: "Alarm hinzuf\xFCgen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751796721229824
+    m_Localized: Alarm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751947594539008
+    m_Localized: MON.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751949909794816
+    m_Localized: DIE.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751951579127808
+    m_Localized: MIT.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751953068105728
+    m_Localized: DON.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751954464808960
+    m_Localized: FREI.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751955819569152
+    m_Localized: SAM.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751956985585664
+    m_Localized: SON.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71752554812317696
+    m_Localized: Windows Sitzposition Y-Offset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71752669165821952
+    m_Localized: FEHLER!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71752800506257408
+    m_Localized: MEM. Opitmierung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74066854415474688
+    m_Localized: "Oh nein.. da ist ein <Entity> in deiner n\xE4he!! sei vorsichtig
+      okay??"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74100562044428288
+    m_Localized: "Oh, schau mal.. was f\xFCr ein sch\xF6ner Tag!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74100573499072512
+    m_Localized: Oh.. es wird dunkel! sei vorsichtig.. o-okay?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74100702608138240
+    m_Localized: Oh nein! Sei vorsichtig, du hast kaum noch Leben!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74100749752115200
+    m_Localized: "S\xFC\xDFer, vergiss nicht zu essen! Du siehst so hungrig aus >_<"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74137876288282624
+    m_Localized: "Diese Funktion erm\xF6glicht die Interaktion zwischen MateEngine
+      und Minecraft und zeigt niedliche Nachrichten bei wichtigen Momenten wie Tageswechsel,
+      gef\xE4hrlichen Mobs in der N\xE4he, niedrigem Gesundheits- oder Hungerzustand,
+      beim Craften, Sterben, Wetter\xE4nderungen oder Schlafen; zur Nutzung installiere
+      den Minecraft-Mod f\xFCr Forge (Version 1.21.10) \xFCber den CurseForge-Launcher
+      oder den Download-Button."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74149153014325248
+    m_Localized: "Oh nein\u2026 du bist gestorben! Aber keine Sorge, alles wird wieder
+      gut."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74149154457165824
+    m_Localized: Schau mal, es regnet! Wow!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74149155774177280
+    m_Localized: Hey, du bist am ertrinken! Hol bitte etwas Luft!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74149157028274176
+    m_Localized: Schlummerzeit! Ab ins Bett. Gute Nacht <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74149158324314112
+    m_Localized: Whoa, was hast du hier gerade gecraftet?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74429045333336064
+    m_Localized: "Der Sync-Modus erm\xF6glicht die Tanzsynchronisation \xFCber alle
+      MateEngine-Instanzen hinweg.\nWenn aktiviert, f\xFChren alle Avatare auf deinem
+      Monitor denselben Tanz perfekt synchron aus.\nStelle sicher, dass du die anderen
+      Instanzen von der Hauptinstanz aus startest, da die Synchronisation sonst nicht
+      funktioniert."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74429046658736128
+    m_Localized: "Der Lock-Modus (Experimentell) f\xFCgt den T\xE4nzen eine Kamera-Verfolgung
+      hinzu; einige Tanzdateien enthalten gro\xDFe Bewegungen nach links oder rechts,
+      die den Avatar aus dem sichtbaren Spielfeld bewegen k\xF6nnten, aber wenn der
+      Lock-Modus aktiviert ist, folgt das Engine-Fenster den Bewegungen des Avatars,
+      sodass er nicht aus dem Sichtbereich herausrutscht."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74473517958078464
+    m_Localized: Juhu!! Essen!! Lecker!! ^-^
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74473519275089920
+    m_Localized: Wow!! So ein Kampf!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74473520520798208
+    m_Localized: "Mmh\u2026 ich glaube, das ist\u2026 ach richtig! Das ist ein <biome>!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74494164503404544
+    m_Localized: Mmh, so lecker!! Hoffentlich hat es dir geschmeckt! <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74494166046908416
+    m_Localized: Ich liebe Essen!! Gib mir auch was!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74494167372308480
+    m_Localized: Ich kann es mir vorstellen! Es war lecker, nicht war? <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74494450139701248
+    m_Localized: Whoa! Wir sind jetzt im <biome>! Unglaublich! <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74494451326689280
+    m_Localized: Weee! <biome> ist so ein cooler Ort, oder? :D <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74494452492705792
+    m_Localized: I-Ich kenne diesen Ort! Das ist <biome>, oder??
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74495033496084480
+    m_Localized: Wow! Du bist echt stark!! Ich freu mich, wie gut du bist! <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74495035303829504
+    m_Localized: "Hoppla! Sieht so aus, als w\xE4re hier etwas gestorben! ^-^"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74495036486623232
+    m_Localized: Unglaublich! Du bist so gut in Minecraft!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74495491606355968
+    m_Localized: Ohh.. was craftest du da?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74495493175025664
+    m_Localized: Ohh.. was craftest du da?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74495494441705472
+    m_Localized: 'Was craften wir hier..? o:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74496053102026752
+    m_Localized: "Ah.. Manchmal liebe ich den regen, wei\xDFt du? Es kann so beruhigend
+      sein! <3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74496054406455296
+    m_Localized: Es regnet, Es regnet, Es regnet!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74496454551445504
+    m_Localized: Ohh! Pass auf, Da ist ein <entity>!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74496467176300544
+    m_Localized: <entity> direkt neben dir! P-Pass auf!! <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74496470120701952
+    m_Localized: Mhh.. Ich glaub da ist ein <entity>! Pass auf!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74496470980534272
+    m_Localized: <entity>!! Oh nein!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74497067465089024
+    m_Localized: "Ohh, Ich bin auch schl\xE4frig!! Lass uns einen Powernap machen
+      und uns kuddeln!! <3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74497074909978624
+    m_Localized: "Gute Nacht! Morgen wird ein gro\xDFer Tag f\xFCr dich, okay? Versprich
+      mir, dass du schlafen gehst! ^-^"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74497077372035072
+    m_Localized: "N\xE4chtle! Schlaf gut!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74497599856484352
+    m_Localized: Ohhh nein...!! >_< E-Es ist okay! Du spielst ja nicht auf hardcore,
+      n-nicht wahr?? D-Du kannst einfach respawnen..! Oder?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74497601844584448
+    m_Localized: "Okay, Keine Sorge! Zeit zu respawnen und den Loot wieder zur\xFCck
+      bekommen! <3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74497603958513664
+    m_Localized: Wenn du stirbst, sterb ich auch!! >_< <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74498198488522752
+    m_Localized: "Mhhh.. Was sind unsere Pl\xE4ne f\xFCr heute? Wir k\xF6nnten neue
+      Biome erkunden und auf ein Abenteuer gehen! Oder villeicht etwas bauen!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74498199964917760
+    m_Localized: "Ich liebe Minecraft so viel! <3 Dir beim Spielen zu zuschauen macht
+      so viel Spa\xDF! Yippee!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74498200799584256
+    m_Localized: "Wir sollten definitiv einen s\xFC\xDFen Hund haben!! Lass uns einen
+      z\xE4hmen! <3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74499007469101056
+    m_Localized: "Pass auf! Du hast wenig Leben\u2026 iss was!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74499008760946688
+    m_Localized: Oh nein.. bitte s-stirb nicht</3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74499009935351808
+    m_Localized: "Es ist alles gut! Wir k\xF6nnen \xFCberleben, keine Sorge! Wir
+      brauchen was zu essen, ehh, Heiltr\xE4nke! Oder einen goldenen Apfel!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74499492481638400
+    m_Localized: "Was magst du lieber? Die Nacht, oder den Tag? Ich mag die Nacht
+      am meisten! Wundersch\xF6ne Sterne! Aber ich hasse alle Mobs in der Nacht >_<
+      <33"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74499493685403648
+    m_Localized: Es wird Nacht?? Wir sollten aufpassen!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74499494822060032
+    m_Localized: La di da di duu! Laa laa laa li louuu! <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74500969312854016
+    m_Localized: "Starre nicht auf die Endermen! Sie sind sch\xFCchtern aber sehr
+      gruselig, wenn sie ver\xE4rgert sind!! >_<"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74500970667614208
+    m_Localized: "Grabe niemals gerade nach unten! Oder du wirst wie \u201Cweeee\u2014AAAH!!\u201D
+      in die Lava fallen! >_<"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74500972060123136
+    m_Localized: Nimm immer extra Tools mit dir! Du kannst niemals wissen, wann deine
+      Spitzhacke kracht! Und bricht!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74500973540712448
+    m_Localized: Stell dir sicher, dass du immer was zu essen hast, Ja? Keine hungrigen
+      Abenteuer erlaubt! Nom nom <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74501548428795904
+    m_Localized: "Mhh.. dein Magen knurrt schon wieder, oder? Hehe~ Zeit f\xFCr deine
+      nom noms! <3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74501549779361792
+    m_Localized: "Oi oi!! Iss bevor du ohnm\xE4chtig f\xE4llst! Wir k\xF6nnen nicht
+      auf einen leeren Magen k\xE4mpfen! >_<"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74501550978932736
+    m_Localized: Eeeh~ Du bist schon wieder hungrig!? Lass uns bitte was zu essen
+      besorgen, bitteeeeeeee! ^-^
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74501552463716352
+    m_Localized: "H\xE4!? Dein Hunger Balken ist schon wieder niedrig!! Schnell,
+      Iss was! Kau Kau <3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74780049190985728
+    m_Localized: BUY $4,99
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74780306805137408
+    m_Localized: "Die Minecraft-Integration ist ein exklusives Feature der Steam-Version.
+      Sie erm\xF6glicht es dem Avatar, bei bestimmten Ereignissen zu sprechen \u2013
+      zum Beispiel, wenn du neue Biome entdeckst oder ein Monster hinter dir auftaucht.
+      Sie reagiert auf dein Gameplay und kommentiert, was du tust. Unterst\xFCtze
+      MateEngine auf Steam, um dieses Feature freizuschalten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74780051929866240
+    m_Localized: "Die Steam-Version enth\xE4lt vier Accessoires: Blumen-Halo, Sakura-Halo,
+      Retro-Halo und Error-Gesichtsmaske. Au\xDFerdem f\xFCgt sie ein Feature hinzu:
+      Ereignisbasierte Nachrichten, durch die der Avatar w\xE4hrend des Ziehens,
+      Tanzens, Sitzens, Entspannens und mehr sprechen kann.\n\nMateEngine kostet
+      etwa 4,99 USD. Wenn du es dir nicht leisten kannst, bleiben die wichtigsten
+      Funktionen f\xFCr immer kostenlos. Wenn du kannst, erw\xE4ge bitte, mich f\xFCr
+      zuk\xFCnftige Updates zu unterst\xFCtzen. Danke!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74780051216834560
+    m_Localized: Minecraft Integration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78533177715499008
+    m_Localized: Timer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78533281222533120
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78533283390988288
+    m_Localized: Stop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78533389917921280
+    m_Localized: "Dies ist die Timer-Funktion. Du kannst einen Timer f\xFCr bis zu
+      24 Stunden und 59 Minuten einstellen. Au\xDFerdem kannst du einen eigenen Text
+      hinzuf\xFCgen, um den Zweck deines Timers zu beschreiben. Zum Beispiel kannst
+      du ihn auf 15 Minuten stellen und eine Notiz hinzuf\xFCgen, die dich daran
+      erinnert, wann deine Pizza fertig ist. Nach Ablauf des Timers kannst du ihn
+      jederzeit wiederverwenden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78900503145127936
+    m_Localized: "Mit zuf\xE4lligem Avatar starten"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78942061286432768
+    m_Localized: "Wenn du die Minecraft-Integrationsfunktion aktivierst, kann der
+      Avatar auf dein Gameplay reagieren \u2013 bei Ereignissen wie Kills, Schlafen,
+      Tag- und Nachtwechsel, Toden, Biomentdeckungen, Monstervorkommen, Wetter\xE4nderungen,
+      niedrigem Gesundheitszustand und mehr. Stelle sicher, dass du die Mod installiert
+      hast, um dieses Feature nutzen zu k\xF6nnen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78942197488066560
+    m_Localized: Minecraft Integration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78942349086990336
+    m_Localized: Minecraft Nachrichten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78942769763098624
+    m_Localized: "Die Minecraft-Integration ist ein exklusives Feature der Steam-Version.
+      Sie erm\xF6glicht es dem Avatar, bei bestimmten Ereignissen zu sprechen \u2013
+      zum Beispiel, wenn du neue Biome entdeckst oder ein Monster hinter dir auftaucht.
+      Sie reagiert auf dein Gameplay und kommentiert, was du tust. Unterst\xFCtze
+      MateEngine auf Steam, um dieses Feature freizuschalten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78942879666446336
+    m_Localized: Mate Engine Kaufen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78942992686161920
+    m_Localized: "Das Food-System erm\xF6glicht es dir, mit der mittleren Maustaste
+      auf den Avatar zu klicken, um das neue Food-Kreismen\xFC zu \xF6ffnen. Du kannst
+      einen Smoothie spawnen und ihn zum Kopf des Avatars bringen, damit sie ihn
+      mit Soundeffekten trinkt. Dieses Feature befindet sich derzeit im Early Access,
+      und in zuk\xFCnftigen Updates werden weitere Nahrungsmittel sowie ein kleines
+      Hungersystem hinzugef\xFCgt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78943100634963968
+    m_Localized: Food System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78943336845582336
+    m_Localized: "Das Food-System ist ein Early-Access-Feature, das nur Steam-Nutzern
+      zur Verf\xFCgung steht. Es erm\xF6glicht dir, Smoothies und andere Nahrungsmittel
+      zu spawnen. Halte einen Smoothie mit der Maus und bring ihn zum Kopf des Avatars,
+      damit sie ihn trinken kann. Unterst\xFCtze den Entwickler, um Zugriff auf dieses
+      Feature zu erhalten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78943700919558144
+    m_Localized: "Timer hinzuf\xFCgen"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,60 @@
+name: Report Bug
+description: Report something that's broken or not working right.
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: |
+        Describe the issue in detail.
+
+        ⚠️ Please report only **one** bug per issue. Submitting multiple bugs will make the report invalid and it may be ignored or deleted.
+      placeholder: "It crashed when I clicked X..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we replicate the bug?
+      placeholder: "Step-by-step instructions to trigger the issue"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: App Version
+      description: Which version were you using when the bug occurred?
+      options:
+        - "2.1.4"
+        - "2.1.2"
+        - "2.1.0"
+        - "1.9.8"
+        - "1.9.5"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: store-edition
+    attributes:
+      label: Store Edition
+      description: Where did you get this version of the app?
+      options:
+        - "GitHub Edition"
+        - "Steam Edition"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: read_note
+    attributes:
+      label: Confirmation
+      description: Confirm you've read the guideline above.
+      options:
+        - label: I confirm this report includes **only one** bug.
+    validations:
+      required: true
