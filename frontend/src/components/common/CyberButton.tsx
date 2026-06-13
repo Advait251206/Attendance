@@ -1,13 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import type { HTMLMotionProps } from 'framer-motion';
 import clsx from 'clsx';
 import { glowButtonVariants } from '../../utils/animations';
 
-interface CyberButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+type IconComponent = React.FC<React.SVGProps<SVGSVGElement>>;
+
+type CyberButtonProps = Omit<HTMLMotionProps<'button'>, 'variants'> & {
     variant?: 'primary' | 'secondary' | 'danger' | 'ghost';
     children: React.ReactNode;
-    icon?: React.ElementType;
-}
+    icon?: IconComponent;
+};
 
 const CyberButton: React.FC<CyberButtonProps> = ({ variant = 'primary', children, icon: Icon, className, ...props }) => {
     const variants = {
@@ -33,7 +36,7 @@ const CyberButton: React.FC<CyberButtonProps> = ({ variant = 'primary', children
             {/* Background Scan effect */}
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full hover:animate-[shimmer_1s_infinite]" />
 
-            {Icon && <Icon className="w-4 h-4" />}
+            {Icon && <Icon className="w-4 h-4" aria-hidden="true" />}
             <span className="relative z-10">{children}</span>
         </motion.button>
     );

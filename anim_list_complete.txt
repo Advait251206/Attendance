@@ -1,0 +1,147 @@
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\FACE_LAYER\FACE_DRAG.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\FACE_LAYER\FACE_HAIR_STROKE.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\FACE_LAYER\FACE_IDLE_1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\FACE_LAYER\FACE_INTIME.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\FACE_LAYER\FACE_RESET.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\FACE_LAYER\PET_HAPPY.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_BIG_SCREEN\BIG_SCREEN_01.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_BIG_SCREEN\SCREEN_SAVER_01.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_BIG_SCREEN\SCREEN_SAVER_02.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_BIG_SCREEN\SCREEN_SAVER_03.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_BIG_SCREEN\SCREEN_SAVER_04.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_10.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_11.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_12.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_13.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_2.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_3.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_4.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_5.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_6.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_7.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_8.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING_9.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\PET_DANCING.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\ME_02\HUSBANDO\HUS_DANCE_01.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\ME_02\HUSBANDO\HUS_DANCE_02.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\ME_02\HUSBANDO\HUS_DANCE_03.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_DANCING\ME_02\HUSBANDO\HUS_DANCE_04.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\CUSTOM_DANCE.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_10.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_11.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_12.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_13.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_14.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_15.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_2.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_3.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_4.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_5.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_6.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_7.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_8.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_9.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE_NON_1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\PET_IDLE.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\PET_IDLE_16.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\PET_IDLE_17.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\PET_IDLE_19.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\PET_IDLE_20.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\PET_IDLE_21.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\PET_IDLE_22.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\HUSBANDO\HUS_DRAG.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\HUSBANDO\HUS_IDLE01.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\HUSBANDO\HUS_IDLE02.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\HUSBANDO\HUS_IDLE03.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\HUSBANDO\HUS_IDLE04.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\HUSBANDO\HUS_IDLE05.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\HUSBANDO\HUS_IDLE06.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\HUSBANDO\HUS_IDLE07.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\HUSBANDO\HUS_IDLE08.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\HUSBANDO\HUS_IDLE09.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_IDLE\ME_02\HUSBANDO\HUS_SITTING.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_INTRO\PET_INTRO_END.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_INTRO\PET_INTRO_LOOP.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_INTRO\PET_INTRO_START.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_INTRO\PET_INTRO.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_MISC\FACE_SMILE 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_MISC\FACE_SMILE.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_MISC\HoverFace.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_MISC\HoverReaction.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_MISC\PET_DRAGGING.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_MISC\PET_HAPPY.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_MISC\PET_LAUGHING.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_MISC\PET_SHY_POINT.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_MISC\PLACE_HOLDER_ANIMATION.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_POSE\PET_POSE_1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_POSE\PET_POSE_2.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_POSE\PET_POSE_3.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_POSE\PET_POSE_4.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\BETA_PET_WINDOW_LAY_2.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\BETA_PET_WINDOW_LAY_3.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\BETA_PET_WINDOW_LAY_4.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\BETA_PET_WINDOW_LAY_5.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\BETA_PET_WINDOW_LAY_6.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\BETA_PET_WINDOW_LAY_7.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\BETA_PET_WINDOW_LAY.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\PET_SITTING_DEMO_2.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\PET_SITTING_DEMO.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\sippose39.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\sipposeC06.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\PET_SIT_01.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\PET_SIT_02.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\PET_SIT_03.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\PET_SIT_04.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\PET_SIT_05.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\PET_SIT_06.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\PET_SIT_07.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\PET_SIT_SMOOTHIE_01.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\suwari1_copy.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\suwari1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\suwari3.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\TEST_HIDE_LEFT.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\TEST_HIDE_RIGHT.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\WINDOW_LAY_10.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\WINDOW_LAY_8.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SITTING\ME_02\WINDOW_LAY_9.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\PET_SLEEPING\PET_SLEEPING.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\UPDATE_2\PET_IDLE_UPDATE2_01.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\UPDATE_2\PET_IDLE_UPDATE2_02.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\UPDATE_2\PET_IDLE_UPDATE2_03.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\UPDATE_2\PET_IDLE_UPDATE2_04.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Animations\UPDATE_2\PET_TALKING.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Custom Dance Player\Prefab\CUSTOM_DANCE.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Custom Dance Player\Prefab\DANCE_END.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - DLCs\CYBER INTERFACE\DLC_CONTENT\animation\PBB_anime.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\MATE ENGINE - Mod SDK\DanceModExample\DanceModExampleAnimation.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\noirunn\KawaiiMacaronMotion\KawaiiMacaronMotion01.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\noirunn\KawaiiMacaronMotion\KawaiiMacaronMotion02.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\QuQu\Sakura_Halo\Animation\Flowering.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\QuQu\Sakura_Halo\Animation\Rotating_animation.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\UMotionExamples\Exported Animations\Idle.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\UMotionExamples\Exported Animations\IKPullups.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\UMotionExamples\Exported Animations\PickUp.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\UMotionExamples\Exported Animations\WalkRM.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HandsBurst_L_OFF_H.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HandsBurst_L_ON_H.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HandsBurst_R_OFF_H.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HandsBurst_R_ON_H.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartBurstParticle_L_OFF 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartBurstParticle_L_ON 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartBurstParticle_R_OFF 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartBurstParticle_R_ON 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartComet_L_shot_OFF 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartComet_L_shot_ON 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartComet_R_shot_OFF 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartComet_R_shot_ON 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\Heartdust_L_OFF 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\Heartdust_L_ON 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\Heartdust_R_OFF 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\Heartdust_R_ON 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartFootstep_OFF 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartFootstep_ON 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartGun_L_OFF 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartGun_L_ON 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartGun_R_OFF 1.anim
+D:\Advait251206\Extra\Attendance\Mate-Engine-main\Assets\[CooGee Works]\HeartParticle_MA_Gimmick\_Animation-Controller\HeartGun_R_ON 1.anim
