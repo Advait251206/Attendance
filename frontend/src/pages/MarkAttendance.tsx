@@ -6,6 +6,7 @@ import SubjectRow from '../components/specific/SubjectRow';
 import { containerVariants } from '../utils/animations';
 import { format, isSameDay, parseISO } from 'date-fns';
 import DailyTimetableEditor from '../components/timetable/DailyTimetableEditor';
+import api from '../api/axios';
 
 const MarkAttendance: React.FC = () => {
     const { subjects, markAttendance, loading } = useAttendance();
@@ -17,7 +18,7 @@ const MarkAttendance: React.FC = () => {
     // Extract fetch logic to be reusable
     const fetchTodayLogs = async () => {
         try {
-            const res = await import('../api/axios').then(m => m.default.get('/attendance'));
+            const res = await api.get('/attendance');
             const allLogs: any[] = res.data;
 
             // Robust date comparison handling timezones
