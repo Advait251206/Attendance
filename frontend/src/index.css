@@ -1,54 +1,87 @@
-/* Import the Google Font defined in tailwind.config.js */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+/* === FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap');
 
-/* These are the essential Tailwind directives. They MUST come first. */
+/* === TAILWIND DIRECTIVES === */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 
-  These are your custom "base" and "component" styles.
-  Using the @layer directive is best practice.
-*/
+/* === BASE STYLES === */
 @layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100%;
+  }
+
   body {
-    @apply bg-matrix-bg text-terminal-gray font-fira-code;
+    @apply bg-background text-neon-white font-mono;
+    margin: 0;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  
+
+  #root {
+    height: 100%;
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    @apply text-hacker-green font-bold;
+    @apply font-display;
   }
 
-  input, button {
-    @apply font-fira-code;
+  input, button, textarea, select {
+    @apply font-mono;
   }
 
-  /* Custom scrollbar for the hacker look */
+  /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
+    height: 6px;
   }
-
   ::-webkit-scrollbar-track {
-    background: #0a0a0a;
+    background: #0a0a14;
   }
-
   ::-webkit-scrollbar-thumb {
-    @apply bg-hacker-green;
+    @apply bg-primary/30 rounded-full;
   }
-
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-green-400; /* A slightly different green for hover */
+    @apply bg-primary/60;
   }
 }
 
+/* === COMPONENT CLASSES === */
 @layer components {
+  /* Glassmorphism card used by NeonCard */
+  .glass-card {
+    background: rgba(13, 13, 20, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Grid background pattern */
+  .bg-grid-pattern {
+    background-image: linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Legacy card */
   .card {
-    @apply bg-cyber-black border border-hacker-green/20 rounded-lg p-4 shadow-lg shadow-hacker-green/10;
+    @apply bg-surface border border-white/10 rounded-lg p-4 shadow-lg;
   }
+
+  /* Legacy primary button */
   .btn-primary {
-    @apply bg-hacker-green text-cyber-black font-bold py-2 px-4 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-hacker-green/40 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply bg-primary text-background font-bold py-2 px-4 rounded-md transition-all duration-300
+           hover:shadow-neon-cyan hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed;
   }
+
+  /* Legacy input */
   .input-field {
-    @apply w-full bg-transparent border-2 border-hacker-green/50 rounded-md p-2 text-hacker-green focus:outline-none focus:ring-2 focus:ring-hacker-green focus:border-transparent transition-all;
+    @apply w-full bg-transparent border-2 border-primary/50 rounded-md p-2 text-primary
+           focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
   }
 }
