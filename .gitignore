@@ -38,8 +38,10 @@ yarn-error.log*
 
 # --- IDE / OS Files ---
 
-# VSCode
-.vscode/
+# VSCode - ignore personal workspace files, but track project settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 
 # macOS
 .DS_Store
